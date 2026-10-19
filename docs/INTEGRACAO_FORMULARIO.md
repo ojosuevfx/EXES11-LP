@@ -4,7 +4,7 @@ A revisão aplica os 16 pedidos levantados em 19/10/2026. A integração com CRM
 
 ## Arquivos
 
-- `site/index.html`: conteúdo, infográfico, comparação, figura de distribuições, formulário e disclaimer.
+- `site/index.html`: conteúdo, infográfico, comparação, calendário de distribuições, formulário e disclaimer.
 - `site/assets/revision.css`: estilos da revisão, incluindo responsividade.
 - `site/assets/lead-form.js`: validação e comportamento provisório do formulário.
 
@@ -47,3 +47,7 @@ O texto adicional do rodapé foi preservado conforme enviado no WhatsApp, inclus
 ## Pendências preexistentes
 
 Os links definitivos do Prospecto, Lâmina, Regulamento, CVM e B3 continuam pendentes no projeto original. O formulário não representa reserva de cotas. As bibliotecas e fontes continuam sendo carregadas por CDN, como na versão original.
+
+## Calendário de distribuições
+
+O card apresenta 20 meses, separados em 2025 (12) e 2026 (8), com R$ 0,13 por cota em destaque. Todos os blocos têm a mesma cor porque o valor foi constante. Rótulos acessíveis incluem mês, ano e valor. Referência visual: Contribution Heatmap, de Aashir Zayd, no 21st.dev (https://21st.dev/@aashirzayd/components/contribution-heatmap). Implementação própria em HTML/CSS, sem dependências novas nem código copiado do componente.
