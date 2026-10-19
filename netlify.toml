@@ -1,0 +1,15 @@
+# A página fica em site/; sem build, só publicar a pasta.
+[build]
+  publish = "site"
+  command = ""
+
+# Vídeo e imagens com cache longo; HTML sempre revalidado.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
