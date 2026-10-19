@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>EXES11 abre a 6ª emissão — Página do assessor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/lenis@1.1.20/dist/lenis.css">
+<script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<style>
+:root{--aqua:#4BA7B3;--navy:#1B2B4B;--res:#374D62;--gra:#595959;--neu:#AEAFB2;--off:#F4F2ED;--gold:#C9A24B}
+*{box-sizing:border-box}
+html{scroll-behavior:auto}
+body{margin:0;background:#fff;font-family:Montserrat,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased}
+a{color:var(--aqua);text-decoration:none}
+button{font-family:inherit}
+::selection{background:rgba(75,167,179,.25)}
+h1,h2,h3,p{margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+.eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--aqua)}
+.h2{font-size:clamp(28px,3vw,40px);line-height:1.15;font-weight:600;letter-spacing:-.02em;text-wrap:balance}
+.h2 span{color:var(--aqua)}
+.sub{font-size:16px;line-height:1.6;color:var(--gra);text-wrap:pretty}
+.legal{font-size:12px;line-height:1.55;color:var(--gra)}
+.center{text-align:center}
+.btn{display:inline-flex;align-items:center;gap:10px;border-radius:12px;padding:8px 20px 8px 8px;font-size:14px;font-weight:600;border:1px solid transparent;cursor:pointer}
+.btn i{width:34px;height:34px;border-radius:9px;display:inline-flex;align-items:center;justify-content:center;flex:none}
+.btn--navy{background:var(--navy);color:#fff}.btn--navy i{background:var(--aqua)}
+.btn--white{background:#fff;color:var(--navy)}.btn--white i{background:var(--aqua)}
+.btn--ghost{background:#fff;color:var(--navy);border-color:rgba(174,175,178,.5)}.btn--ghost i{border:1px solid rgba(75,167,179,.5)}
+.btn--ghost-dark{background:transparent;color:#fff;border-color:rgba(255,255,255,.5)}.btn--ghost-dark i{border:1px solid rgba(255,255,255,.5)}
+.card{background:#fff;border-radius:16px;border:1px solid rgba(174,175,178,.2)}
+.grid{display:grid;gap:16px}
+.g3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.chart-box{position:relative;width:100%}
+.chart-box canvas{display:block}
+.kicker{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gra)}
+.section{padding:120px 20px}
+.section--off{background:var(--off)}
+.section--navy{background:var(--navy);color:#fff}
+.section--navy .legal,.section--navy .sub{color:rgba(255,255,255,.78)}
+
+/* compliance (minimalista) */
+.compliance{position:sticky;top:0;z-index:50}
+.tarja{background:var(--navy);color:#fff;text-align:center;font-weight:700;letter-spacing:0;font-size:clamp(16px,2.25vw,28px);line-height:1.15;padding:8px 16px}
+.aviso{background:rgba(255,255,255,.94);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid rgba(174,175,178,.25);color:var(--gra);text-align:center;font-weight:500;letter-spacing:0;font-size:11.5px;line-height:1.5;padding:8px 20px;text-wrap:balance}
+.aviso b{color:var(--navy);font-weight:600}
+
+/* hero */
+.hero{position:relative;background:#fff;overflow:clip;min-height:100vh}
+.hero__media{position:absolute;inset:0;overflow:hidden;z-index:0}
+.hero__media video,.hero__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%;filter:blur(4px) saturate(1.05);transform:scale(1.06)}
+.hero__fade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.55) 0%,rgba(255,255,255,.72) 35%,rgba(255,255,255,.9) 70%,#fff 100%);pointer-events:none}
+.hero__inner{position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:24px 20px 96px}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--navy);border-radius:999px;padding:10px 12px 10px 22px;color:#fff;flex-wrap:wrap}
+.nav img{height:26px;width:auto;display:block}
+.nav__links{display:flex;gap:28px;font-size:14px;font-weight:500}
+.nav__links a{color:#fff}
+.nav__ri{display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--navy);border-radius:999px;padding:6px 16px 6px 6px;font-size:14px;font-weight:600}
+.nav__ri i{width:30px;height:30px;border-radius:999px;background:var(--aqua);display:inline-flex;align-items:center;justify-content:center}
+.hero__copy{position:relative;max-width:1140px;margin:72px auto 0;text-align:center}
+.pill{display:inline-flex;align-items:center;gap:8px;background:rgba(75,167,179,.12);border-radius:999px;padding:8px 16px;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--navy)}
+.pill i{width:7px;height:7px;border-radius:50%;background:var(--aqua)}
+.h1{margin:22px auto 0;max-width:none;font-size:clamp(32px,4.5vw,56px);line-height:1.1;font-weight:700;letter-spacing:-.02em;text-transform:uppercase;text-wrap:balance}
+.h1 span{color:var(--aqua)}
+.lead{margin:22px auto 0;max-width:720px;font-size:clamp(17px,1.5vw,21px);font-weight:600;line-height:1.4}
+.hero__cta{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:30px}
+.hl{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:56px}
+.hl>div{border-radius:20px;padding:20px 22px;display:flex;align-items:flex-start;gap:14px;text-align:left;font-size:15px;line-height:1.5}
+.hl span.ic{width:40px;height:40px;flex:none;border-radius:12px;background:rgba(255,255,255,.55);box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 2px 6px rgba(27,43,75,.08);display:inline-flex;align-items:center;justify-content:center}
+.float{position:absolute;display:flex;align-items:center;gap:12px;border-radius:18px;padding:12px 16px;text-align:left}
+.float i{width:36px;height:36px;border-radius:11px;background:rgba(255,255,255,.55);box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 2px 6px rgba(27,43,75,.08);display:inline-flex;align-items:center;justify-content:center;flex:none}
+.float small{display:block;font-size:12px;color:var(--gra)}
+.float b{font-size:16px}
+.float::after{content:"";position:absolute;width:0;height:0;border:7px solid transparent}
+.float--a{left:0;top:38%}.float--a::after{right:-18px;top:14px;border-left-color:var(--aqua);transform:rotate(-30deg)}
+.float--b{right:0;top:30%}.float--b::after{left:-18px;top:14px;border-right-color:var(--aqua);transform:rotate(30deg)}
+.hero__scroll{margin-top:40px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gra);display:flex;flex-direction:column;align-items:center;gap:8px}
+.hero__scroll i{width:1px;height:36px;background:var(--aqua);animation:scrl 1.6s ease-in-out infinite}
+@keyframes scrl{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* logos */
+.logos{background:var(--navy);border-top:1px solid rgba(255,255,255,.08)}
+.logos__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px;padding:40px 20px;max-width:1180px;margin:0 auto}
+.logo{text-align:center}
+.logo .kicker{color:rgba(255,255,255,.6)}
+.logo .box{margin-top:10px;height:64px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;padding:10px 16px;gap:8px}
+.logo .box img{max-height:100%;max-width:100%;object-fit:contain}
+.logo .box.seals img{height:44px;border-radius:6px}
+.logo .box small{font-size:11px;color:rgba(255,255,255,.8);font-weight:600}
+
+/* entenda */
+.feat{position:relative;overflow:hidden;border-radius:18px;color:#fff;padding:28px;min-height:300px;display:flex;flex-direction:column;justify-content:flex-end;background:var(--navy)}
+.feat img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.95}
+.feat::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(27,43,75,0) 30%,rgba(27,43,75,.9) 100%)}
+.feat>div{position:relative;z-index:1}
+.feat h3{font-size:22px;font-weight:600}.feat p{margin-top:10px;font-size:14px;line-height:1.6;color:rgba(255,255,255,.85)}
+.feat--light{background:var(--off);color:var(--navy);justify-content:space-between}
+.feat--light::after{display:none}
+.bignum{font-size:clamp(40px,4vw,52px);font-weight:700;letter-spacing:-.03em;line-height:1}
+.cmp{border-radius:16px;padding:24px;background:#fff;border:1px solid rgba(174,175,178,.4)}
+.cmp--new{border-color:rgba(75,167,179,.6);background:linear-gradient(180deg,rgba(75,167,179,.06),#fff)}
+.cmp ul{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:10px}
+.cmp li{display:flex;gap:10px;font-size:14px;line-height:1.5;color:var(--gra)}
+.cmp li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--neu);flex:none;margin-top:7px}
+.cmp--new li::before{background:var(--aqua)}
+.cmp--new li{color:var(--navy)}
+
+/* tabs */
+.tabs{display:inline-flex;background:#fff;border:1px solid rgba(174,175,178,.3);border-radius:999px;padding:4px;margin-top:36px;gap:4px}
+.tabs button{border:0;cursor:pointer;border-radius:999px;padding:10px 20px;font-size:14px;font-weight:600;background:transparent;color:var(--navy)}
+.tabs button.on{background:var(--navy);color:#fff}
+.tabpanel{display:none}.tabpanel.on{display:block}
+.tcard{background:#fff;border-radius:16px;padding:26px;border:1px solid rgba(174,175,178,.2);text-align:left}
+.tcard .n{width:36px;height:36px;border-radius:10px;background:rgba(75,167,179,.14);display:flex;align-items:center;justify-content:center;color:var(--aqua);font-weight:700;font-size:13px}
+.tcard .v{margin-top:6px;font-size:20px;font-weight:600;line-height:1.3}
+.tcard p{margin-top:10px;font-size:14px;line-height:1.55;color:var(--gra)}
+.mtl{background:#fff;border-radius:16px;padding:28px 26px;margin-top:16px;border:1px solid rgba(174,175,178,.2)}
+.mtl__row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));position:relative}
+.mtl__row::before{content:"";position:absolute;left:16%;right:16%;top:7px;height:2px;background:rgba(75,167,179,.35)}
+.mtl__it{text-align:center;position:relative}
+.mtl__it i{display:block;width:16px;height:16px;border-radius:50%;background:var(--aqua);margin:0 auto;border:3px solid #fff;box-shadow:0 0 0 1px var(--aqua)}
+.mtl__it b{display:block;margin-top:12px;font-size:15px;color:var(--aqua)}
+.mtl__it small{display:block;margin-top:4px;font-size:12px;color:var(--gra);line-height:1.4}
+
+/* lists */
+.rows{border-top:1px solid rgba(174,175,178,.3);text-align:left}
+.row{display:grid;grid-template-columns:40px minmax(0,1fr) 24px;gap:16px;align-items:start;padding:22px 0;border-bottom:1px solid rgba(174,175,178,.3)}
+.row .n{font-size:12px;color:var(--gra);padding-top:4px}
+.row .k{font-size:17px;font-weight:600}
+.row .v{margin-top:4px;font-size:14px;line-height:1.55;color:var(--gra)}
+.rows--2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));column-gap:48px}
+
+/* tese */
+.tese{background:radial-gradient(ellipse 50% 60% at 50% 30%,rgba(75,167,179,.45),transparent 70%),linear-gradient(180deg,#1B2B4B 0%,#374D62 100%);color:#fff}
+.glass{border:1px solid rgba(255,255,255,.28);border-radius:16px;padding:26px;background:rgba(255,255,255,.06);backdrop-filter:blur(6px);min-height:300px;display:flex;flex-direction:column;text-align:left}
+.glass .g{font-size:14px;font-weight:600;color:var(--gold)}
+.glass h3{margin-top:14px;font-size:24px;font-weight:600;line-height:1.2}
+.glass p{margin-top:10px;font-size:14px;line-height:1.55;color:rgba(255,255,255,.85)}
+.glass .chart-box{margin-top:auto;height:92px}.glass p+.chart-box{margin-top:auto}.glass>.chart-box{margin-top:auto}
+
+
+/* carousel */
+.car-nav{display:flex;justify-content:flex-end;gap:8px;margin-bottom:16px}
+.car-nav button{width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
+.car{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 20px 12px;margin:0 -20px;scrollbar-width:none}
+.car::-webkit-scrollbar{display:none}
+.ccard{width:min(360px,82vw);flex:0 0 auto;scroll-snap-align:start;background:#fff;color:var(--navy);border-radius:16px;padding:24px;display:flex;flex-direction:column;text-align:left}
+.ccard .t{margin-top:6px;font-size:18px;font-weight:600;line-height:1.3}
+.ccard .chart-box{height:190px;margin-top:18px}
+
+.ccard .note{margin-top:14px;font-size:10px;line-height:1.5;color:var(--gra)}
+.rank{display:grid;gap:5px;margin-top:16px}
+.rank div{display:grid;grid-template-columns:28px 1fr auto;gap:8px;align-items:center;font-size:12px;padding:5px 8px;border-radius:6px;background:#F7F8FA}
+.rank div.me{background:rgba(75,167,179,.14);font-weight:700}
+.rank div span:first-child{width:22px;height:22px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-size:10px;font-weight:700}
+.rank div.me span:first-child{background:var(--aqua)}
+
+/* carteira */
+.facts{margin-top:28px;border-top:1px solid rgba(174,175,178,.3)}
+.fact{display:grid;grid-template-columns:120px minmax(0,1fr);gap:16px;padding:16px 0;border-bottom:1px solid rgba(174,175,178,.3)}
+.fact b{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--aqua);padding-top:2px}
+.fact span{font-size:14px;line-height:1.55}
+.ratings{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.rating{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid rgba(174,175,178,.3);border-radius:12px;padding:8px 12px}
+.rating img{height:22px;width:auto}
+.rating b{font-size:13px}.rating small{display:block;font-size:10px;color:var(--gra)}
+.pcard{background:#fff;border-radius:18px;padding:28px;border:1px solid rgba(174,175,178,.2)}
+.pcard h3{font-size:18px;font-weight:600}
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}
+.pgrid .full{grid-column:1/-1}
+.mini{border:1px solid rgba(174,175,178,.25);border-radius:12px;padding:14px}
+.mini .kicker{margin-bottom:8px}
+.mini .chart-box{height:150px}
+.mini.tall .chart-box{height:230px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px;margin-top:16px}
+.stat{background:var(--off);border-radius:12px;padding:12px}
+.stat b{display:block;font-size:22px;font-weight:700;letter-spacing:-.02em}
+.stat small{font-size:11px;color:var(--gra);line-height:1.3;display:block;margin-top:2px}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:18px}
+.gallery img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:12px}
+.acc{margin-top:18px}
+.acc summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;background:var(--off);border-radius:12px;padding:16px 18px;font-size:15px;font-weight:600}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary span{color:var(--aqua);font-size:20px;line-height:1}
+.acc[open] summary span{transform:rotate(45deg)}
+.tbl-wrap{overflow-x:auto;margin-top:12px}
+table.tbl{width:100%;border-collapse:collapse;font-size:12px}
+.tbl th{text-align:left;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--gra);padding:8px;border-bottom:1px solid rgba(174,175,178,.4);white-space:nowrap}
+.tbl td{padding:8px;border-bottom:1px solid rgba(174,175,178,.2);white-space:nowrap}
+.tbl tr.total td{font-weight:700;border-top:2px solid var(--navy)}
+
+/* destino */
+.dcard{border:1px solid rgba(255,255,255,.2);border-radius:16px;padding:28px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,0));display:flex;flex-direction:column;text-align:left}
+.dcard--hi{border-color:var(--aqua);background:linear-gradient(180deg,rgba(75,167,179,.18),rgba(75,167,179,.02))}
+.dcard .top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+.badge{background:var(--gold);color:var(--navy);border-radius:999px;padding:5px 10px;font-size:10px;font-weight:700;letter-spacing:.1em}
+.dcard .big{margin-top:22px;font-size:clamp(32px,3.2vw,44px);font-weight:700;letter-spacing:-.03em;line-height:1}
+.dcard .sm{margin-top:8px;font-size:14px;color:rgba(255,255,255,.75)}
+.dcard .ft{margin-top:28px;border-top:1px solid rgba(255,255,255,.15);padding-top:18px;font-size:15px;line-height:1.5}
+.dcharts{margin-top:16px}
+.dchart{border:1px solid rgba(255,255,255,.2);border-radius:16px;padding:22px;background:rgba(255,255,255,.04);text-align:left}
+.dchart .kicker{color:rgba(255,255,255,.7)}
+.dchart .chart-box{height:200px;margin-top:12px}
+
+/* cronograma */
+.tl{position:relative;max-width:900px;margin:56px auto 0}
+.tl::before{content:"";position:absolute;top:0;bottom:0;width:2px;background:rgba(174,175,178,.5);left:50%;transform:translateX(-50%)}
+.tl__row{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 40px minmax(0,1fr);gap:0 24px;align-items:center;padding:14px 0}
+.tl__txt{padding:6px 0}
+.tl__row:nth-child(odd) .tl__txt{grid-column:1;text-align:right}
+.tl__row:nth-child(even) .tl__txt{grid-column:3;text-align:left}
+.tl__txt b{display:block;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--aqua)}
+.tl__txt span{display:block;margin-top:4px;font-size:18px;font-weight:600;line-height:1.3}
+.tl__dot{grid-column:2;grid-row:1;justify-self:center;width:18px;height:18px;border-radius:50%;background:var(--off);border:2px solid var(--neu);box-shadow:0 0 0 4px var(--off)}
+.tl__row.now .tl__txt{background:#fff;border-radius:16px;padding:18px 22px;box-shadow:0 10px 30px rgba(27,43,75,.08)}
+.tl__row.now .tl__dot{background:var(--aqua);border-color:var(--aqua)}
+
+/* faq + cta */
+.faq{display:flex;flex-direction:column;gap:12px;margin-top:48px;text-align:left}
+.faq details{background:var(--off);border-radius:16px;padding:22px 24px}
+.faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:17px;font-weight:600}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary span{color:var(--aqua);font-size:22px;line-height:1;font-weight:400}
+.faq details[open] summary span{transform:rotate(45deg)}
+.faq p{margin-top:12px;font-size:14px;line-height:1.6;color:var(--gra)}
+.cta{margin-top:120px;border-radius:24px;padding:clamp(48px,6vw,88px) 24px;color:#fff;text-align:center;background:radial-gradient(ellipse 45% 70% at 50% 40%,rgba(27,43,75,.95),transparent 75%),linear-gradient(120deg,#1B2B4B 0%,#374D62 45%,#4BA7B3 100%)}
+.cta h2{max-width:720px;margin:0 auto;font-size:clamp(28px,3.2vw,44px);line-height:1.15;font-weight:600;letter-spacing:-.02em}
+
+/* footer */
+.footer{background:var(--navy);color:#fff;margin-top:120px;position:relative;overflow:hidden}
+.footer__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:40px}
+.footer a{color:#fff}
+.footer .kicker{color:rgba(255,255,255,.6)}
+.footer__legal{margin-top:56px;border-top:1px solid rgba(255,255,255,.15);padding-top:32px;display:flex;flex-direction:column;gap:12px;font-size:12px;line-height:1.6;color:rgba(255,255,255,.75)}
+.footer__mark{display:block;width:min(820px,80%);height:auto;margin:48px auto 0;opacity:.14;transform:translateY(18%);-webkit-mask-image:linear-gradient(180deg,#000 30%,transparent 95%);mask-image:linear-gradient(180deg,#000 30%,transparent 95%);user-select:none;pointer-events:none}
+
+@media (max-width:1180px){.float{display:none}}
+@media (max-width:767px){
+  .nav__links{display:none}
+  .hero{min-height:auto}
+  .mtl__row{grid-template-columns:1fr;gap:12px}.mtl__row::before{display:none}
+  .mtl__it{text-align:left;display:grid;grid-template-columns:16px 1fr;gap:4px 12px}.mtl__it b{margin-top:0}.mtl__it small{grid-column:2}
+  .tl::before{left:20px}
+  .tl__row{grid-template-columns:40px minmax(0,1fr)}
+  .tl__row:nth-child(odd) .tl__txt,.tl__row:nth-child(even) .tl__txt{grid-column:2;text-align:left}
+  .tl__dot{grid-column:1}
+  .pgrid{grid-template-columns:1fr}
+  .gallery{grid-template-columns:repeat(2,1fr)}
+  .section{padding:72px 20px}
+}
+
+/* ===== 21st.dev: Morphing Scroll Navbar (portado p/ CSS puro, paleta Exes) ===== */
+.msn-progress{position:fixed;z-index:101;top:0;right:0;left:0;height:2px;background:linear-gradient(90deg,#4BA7B3,#8FD3DB);transform:scaleX(0);transform-origin:0 50%;will-change:transform}
+.msn-nav{position:fixed;z-index:100;top:0;right:0;left:0;display:flex;justify-content:center;padding:0 20px;pointer-events:none;color:#1B2B4B}
+.msn-nav a{color:inherit;text-decoration:none}.msn-nav a.msn-button{color:#fff}
+.msn-shell{pointer-events:auto;display:flex;align-items:center;justify-content:space-between;gap:22px;width:100%;max-width:1320px;height:72px;margin-top:14px;padding:0 10px 0 32px;border:1px solid rgba(174,175,178,.35);border-radius:999px;background:#fff;box-shadow:0 6px 24px -14px rgba(27,43,75,.25);transition:max-width .5s cubic-bezier(.34,1.32,.5,1),height .38s cubic-bezier(.34,1.2,.5,1),margin-top .38s ease,padding .38s ease,background-color .3s ease,border-color .3s ease,box-shadow .4s ease}
+.msn-nav.is-floating .msn-shell{max-width:1040px;height:62px;margin-top:10px;padding:0 8px 0 26px;background:rgba(255,255,255,.86);-webkit-backdrop-filter:saturate(170%) blur(16px);backdrop-filter:saturate(170%) blur(16px);box-shadow:0 14px 40px -20px rgba(27,43,75,.45)}
+.msn-nav.is-compact .msn-shell{max-width:560px;height:52px}
+.msn-brand{flex:none;display:flex;align-items:center;transition:transform .18s ease}.msn-brand img{height:30px;width:auto;display:block;transition:height .38s ease}.msn-nav.is-compact .msn-brand img{height:22px}.msn-brand:hover{transform:translateY(-1px)}
+.msn-links{display:flex;gap:40px;max-width:640px;overflow:hidden;opacity:1;transition:max-width .45s cubic-bezier(.34,1.2,.5,1),opacity .28s ease,transform .3s ease,gap .35s ease}
+.msn-nav.is-compact .msn-links{max-width:0;gap:0;opacity:0;transform:translateY(-8px);pointer-events:none}
+.msn-links a{position:relative;color:#1B2B4B;font-size:15px;font-weight:500;white-space:nowrap;transition:color .15s ease}
+.msn-links a:after{content:"";position:absolute;right:0;bottom:-6px;left:0;height:2px;border-radius:2px;background:#4BA7B3;transform:scaleX(0);transform-origin:0 50%;transition:transform .28s cubic-bezier(.2,.7,.2,1)}
+.msn-links a:hover,.msn-links a[aria-current="location"]{color:#1B2B4B;font-weight:600}.msn-links a:hover:after,.msn-links a[aria-current="location"]:after{transform:scaleX(1)}
+.msn-actions{display:flex;flex:none;align-items:center;gap:10px}
+.msn-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;height:52px;padding:0 26px;border:0;border-radius:999px;background:#1B2B4B;color:#fff;font-size:14px;font-weight:700;letter-spacing:.02em;white-space:nowrap;transition:height .38s ease,font-size .38s ease,padding .38s ease,background-color .18s ease,transform .18s ease,box-shadow .22s ease}
+.msn-button i{display:inline-flex;align-items:center;justify-content:center;transition:transform .25s ease}.msn-button:hover i{transform:translate(2px,-2px)}.msn-button:hover{background:#24365a}
+.msn-button:hover{transform:translateY(-2px);box-shadow:0 10px 22px -12px rgba(27,43,75,.6)}.msn-button:active{transform:translateY(0) scale(.97)}
+.msn-nav.is-compact .msn-button{height:44px;padding:0 20px;font-size:13px}
+@media(max-width:900px){.msn-links{display:none}.msn-nav.is-floating .msn-shell{max-width:680px}.msn-nav.is-compact .msn-shell{max-width:520px}}
+@media(max-width:560px){.msn-nav{padding:0 12px}.msn-shell,.msn-nav.is-floating .msn-shell,.msn-nav.is-compact .msn-shell{gap:12px;height:56px;padding:0 6px 0 14px}.msn-button span{display:none}.msn-button{padding:0 6px}}
+.hero__inner{padding-top:100px}
+
+/* ===== 21st.dev: Shiny Button (hyperiux) portado: borda conica girante + brilho ===== */
+@property --ga{syntax:"<angle>";initial-value:0deg;inherits:false}
+@property --gao{syntax:"<angle>";initial-value:0deg;inherits:false}
+@property --gp{syntax:"<percentage>";initial-value:5%;inherits:false}
+@property --gs{syntax:"<color>";initial-value:white;inherits:false}
+.btn-shine{--base:#1B2B4B;--inset:#24365a;--label:#fff;--accent:#4BA7B3;--accent-soft:#9FD9E0;--duration:3s;--transition:.8s cubic-bezier(.25,1,.5,1);
+  isolation:isolate;position:relative;overflow:hidden;cursor:pointer;display:inline-flex;align-items:center;gap:10px;padding:12px 24px 12px 12px;font-size:14px;font-weight:600;line-height:1.2;letter-spacing:.01em;border:1px solid transparent;border-radius:999px;color:var(--label);text-decoration:none;
+  background:linear-gradient(var(--base),var(--base)) padding-box,conic-gradient(from calc(var(--ga) - var(--gao)),transparent,var(--accent) var(--gp),var(--gs) calc(var(--gp)*2),var(--accent) calc(var(--gp)*3),transparent calc(var(--gp)*4)) border-box;
+  box-shadow:inset 0 0 0 1px var(--inset);transition:var(--transition);transition-property:--gao,--gp,--gs,transform}
+.btn-shine::before,.btn-shine::after,.btn-shine>span::before{content:"";pointer-events:none;position:absolute;inset-inline-start:50%;inset-block-start:50%;translate:-50% -50%;z-index:-1}
+.btn-shine:active{translate:0 1px}
+.btn-shine::before{--size:calc(100% - 6px);--position:2px;--space:calc(var(--position)*2);width:var(--size);height:var(--size);background:radial-gradient(circle at var(--position) var(--position),white calc(var(--position)/4),transparent 0) padding-box;background-size:var(--space) var(--space);background-repeat:space;mask-image:conic-gradient(from calc(var(--ga) + 45deg),black,transparent 10% 90%,black);border-radius:inherit;opacity:.35}
+.btn-shine::after{width:100%;aspect-ratio:1;background:linear-gradient(-50deg,transparent,var(--accent),transparent);mask-image:radial-gradient(circle at bottom,transparent 40%,black);opacity:.6}
+.btn-shine>span{z-index:1;display:inline-flex;align-items:center;gap:10px}
+.btn-shine>span::before{--size:calc(100% + 1rem);width:var(--size);height:var(--size);box-shadow:inset 0 -1ex 2rem 4px var(--accent);opacity:0;transition:opacity var(--transition);animation:calc(var(--duration)*1.5) breathe linear infinite}
+.btn-shine>span i{width:30px;height:30px;border-radius:999px;background:var(--accent);display:inline-flex;align-items:center;justify-content:center;flex:none}
+.btn-shine,.btn-shine::before{animation:gangle var(--duration) linear infinite,gangle calc(var(--duration)/.4) linear infinite reverse paused;animation-composition:add}
+.btn-shine::after{animation:shimmer var(--duration) linear infinite,shimmer calc(var(--duration)/.4) linear infinite reverse paused;animation-composition:add}
+.btn-shine:is(:hover,:focus-visible){--gp:20%;--gao:95deg;--gs:var(--accent-soft);transform:translateY(-1px)}
+.btn-shine:is(:hover,:focus-visible),.btn-shine:is(:hover,:focus-visible)::before,.btn-shine:is(:hover,:focus-visible)::after{animation-play-state:running}
+.btn-shine:is(:hover,:focus-visible)>span::before{opacity:1}
+.btn-shine--light{--base:#fff;--inset:#E6E8EB;--label:#1B2B4B}
+@keyframes gangle{to{--ga:360deg}}
+@keyframes shimmer{to{rotate:360deg}}
+@keyframes breathe{from,to{scale:1}50%{scale:1.2}}
+@media (prefers-reduced-motion:reduce){.btn-shine,.btn-shine::before,.btn-shine::after,.btn-shine>span::before{animation:none!important}.btn-shine{transition:none}}
+
+/* ===== Spotlight nos cards (glow que segue o ponteiro) ===== */
+.spot{position:relative;overflow:hidden;transition:transform .3s ease,box-shadow .3s ease}
+.spot::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .35s ease;background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),rgba(75,167,179,.22),transparent 60%);z-index:0}
+.spot:hover::before{opacity:1}
+.spot>*{position:relative;z-index:1}
+.spot--ring::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .35s ease;padding:1px;background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),rgba(75,167,179,.9),transparent 70%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;z-index:2}
+.spot--ring:hover::after{opacity:1}
+.spot:hover{transform:translateY(-3px);box-shadow:0 18px 40px -22px rgba(27,43,75,.35)}
+.feat.spot::before{display:none}
+
+/* ===== Carrossel infinito de empreendimentos (comportamento "Infinite Moving Cards", 21st.dev) ===== */
+.emp-band{margin-top:96px}
+.emp-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:32px}
+.marquee{--gap:18px;--speed:48s;overflow:hidden;padding:6px 0 10px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.marquee__track{display:flex;gap:var(--gap);width:max-content;animation:marquee var(--speed) linear infinite}
+.marquee:hover .marquee__track{animation-play-state:paused}
+@keyframes marquee{to{transform:translateX(calc(-50% - var(--gap)/2))}}
+.emp{position:relative;margin:0;width:260px;aspect-ratio:3/4;border-radius:18px;overflow:hidden;background:var(--navy);flex:none;box-shadow:0 14px 34px -22px rgba(27,43,75,.55);transition:transform .35s ease}
+.emp img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.emp:hover{transform:translateY(-4px)}.emp:hover img{transform:scale(1.05)}
+.emp figcaption{position:absolute;inset:auto 0 0 0;padding:44px 18px 16px;color:#fff;background:linear-gradient(180deg,rgba(27,43,75,0),rgba(27,43,75,.92) 70%)}
+.emp figcaption b{display:block;font-size:18px;font-weight:600;line-height:1.2}
+.emp figcaption small{display:block;margin-top:4px;font-size:12px;color:rgba(255,255,255,.8)}
+.emp__pl{position:absolute;top:-14px;left:18px;transform:translateY(-100%);background:rgba(255,255,255,.92);color:var(--navy);border-radius:999px;padding:5px 10px;font-size:11px;font-weight:700}
+@media (prefers-reduced-motion:reduce){.marquee__track{animation:none}.marquee{overflow-x:auto}}
+@media (max-width:767px){.emp{width:210px}.marquee{--speed:38s}}
+
+
+/* ---------- Cronograma: linha que preenche e datas que entram com o scroll ---------- */
+.tl::after{content:"";position:absolute;top:0;width:2px;left:50%;transform:translateX(-50%);height:var(--tlp,0%);background:linear-gradient(180deg,#4BA7B3,#8FD3DB);border-radius:2px;transition:height .15s linear}
+.tl__row .tl__txt{opacity:0;transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1)}
+.tl__row:nth-child(odd) .tl__txt{transform:translateX(-36px)}
+.tl__row:nth-child(even) .tl__txt{transform:translateX(36px)}
+.tl__row.in .tl__txt{opacity:1;transform:none}
+.tl__row .tl__dot{position:relative;z-index:1;transition:background .4s ease,border-color .4s ease,transform .4s ease}
+.tl__row.in .tl__dot{background:#4BA7B3;border-color:#4BA7B3;transform:scale(1.15)}
+.tl__row.now:not(.in) .tl__dot{background:var(--off);border-color:var(--neu)}
+.tl__row.now.in .tl__dot{box-shadow:0 0 0 4px var(--off),0 0 0 10px rgba(75,167,179,.25)}
+@media (max-width:767px){.tl::after{left:20px}.tl__row:nth-child(odd) .tl__txt,.tl__row:nth-child(even) .tl__txt{transform:translateY(18px)}.tl__row.in .tl__txt{transform:none}}
+@media (prefers-reduced-motion:reduce){.tl__row .tl__txt{opacity:1;transform:none;transition:none}.tl::after{height:100%}}
+
+/* ===== Liquid glass nos cards do hero ===== */
+.hl>div,.float{
+  position:relative;isolation:isolate;overflow:visible;
+  background:linear-gradient(135deg,rgba(255,255,255,.42) 0%,rgba(255,255,255,.18) 45%,rgba(255,255,255,.28) 100%);
+  -webkit-backdrop-filter:blur(18px) saturate(180%) brightness(1.06);backdrop-filter:blur(18px) saturate(180%) brightness(1.06);
+  border:1px solid rgba(255,255,255,.55);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.95),
+    inset 0 -1px 0 rgba(255,255,255,.25),
+    inset 1px 0 0 rgba(255,255,255,.35),
+    inset 0 0 22px rgba(255,255,255,.22),
+    0 10px 30px -12px rgba(27,43,75,.28),
+    0 2px 6px rgba(27,43,75,.06);
+  transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s ease,background .35s ease}
+.float{position:absolute}
+/* reflexo especular que segue o ponteiro */
+.hl>div::before,.float::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:-1;
+  background:
+    radial-gradient(120% 70% at 18% -10%,rgba(255,255,255,.75),rgba(255,255,255,0) 55%),
+    radial-gradient(220px circle at var(--gx,30%) var(--gy,0%),rgba(255,255,255,.45),rgba(255,255,255,0) 60%);
+  opacity:.9;mix-blend-mode:soft-light}
+/* borda que refrata: anel com brilho nas quinas */
+.hl>div::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;padding:1px;
+  background:linear-gradient(135deg,rgba(255,255,255,.95),rgba(255,255,255,.15) 30%,rgba(75,167,179,.35) 70%,rgba(255,255,255,.8));
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
+.hl>div:hover,.float:hover{transform:translateY(-3px) scale(1.01);background:linear-gradient(135deg,rgba(255,255,255,.5) 0%,rgba(255,255,255,.24) 45%,rgba(255,255,255,.34) 100%);
+  box-shadow:inset 0 1px 0 #fff,inset 0 -1px 0 rgba(255,255,255,.3),inset 0 0 26px rgba(255,255,255,.28),0 18px 40px -14px rgba(27,43,75,.35),0 2px 6px rgba(27,43,75,.06)}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.hl>div,.float{background:rgba(255,255,255,.88)}}
+
+/* ===== Animações de botões e interações ===== */
+:root{--ease-out:cubic-bezier(.2,.8,.2,1);--ease-spring:cubic-bezier(.34,1.56,.64,1)}
+
+/* Abas: pílula navy que desliza até a aba ativa */
+.tabs{position:relative;isolation:isolate}
+.tabs button{position:relative;z-index:1;background:transparent!important;transition:color .35s var(--ease-out),transform .2s ease}
+.tabs button.on{color:#fff}
+.tabs button:not(.on):hover{color:var(--aqua)}
+.tabs button:active{transform:scale(.96)}
+.tabs__pill{position:absolute;z-index:0;top:4px;bottom:4px;left:0;width:0;border-radius:999px;background:var(--navy);box-shadow:0 6px 16px -6px rgba(27,43,75,.55);transition:transform .5s var(--ease-spring),width .5s var(--ease-spring)}
+/* Conteúdo da aba entra em cascata */
+.tabpanel.on .tcard,.tabpanel.on .mtl,.tabpanel.on>.legal{animation:tabIn .55s var(--ease-out) both}
+.tabpanel.on .tcard:nth-child(2){animation-delay:.07s}
+.tabpanel.on .tcard:nth-child(3){animation-delay:.14s}
+.tabpanel.on .mtl{animation-delay:.2s}
+.tabpanel.on>.legal{animation-delay:.26s}
+.tabpanel.on .mtl__it i{animation:dotPop .5s var(--ease-spring) both}
+.tabpanel.on .mtl__it:nth-child(1) i{animation-delay:.3s}.tabpanel.on .mtl__it:nth-child(2) i{animation-delay:.42s}.tabpanel.on .mtl__it:nth-child(3) i{animation-delay:.54s}
+.tabpanel.on .mtl__row::before{transform-origin:0 50%;animation:lineGrow .7s var(--ease-out) .3s both}
+@keyframes tabIn{from{opacity:0;transform:translateY(14px) scale(.985)}to{opacity:1;transform:none}}
+@keyframes dotPop{from{transform:scale(0)}to{transform:scale(1)}}
+@keyframes lineGrow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+
+/* Botões comuns: sobem, sombra e ícone que anda */
+.btn{transition:transform .25s var(--ease-out),box-shadow .25s ease,background-color .25s ease,border-color .25s ease}
+.btn i{transition:transform .3s var(--ease-spring),background-color .25s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 24px -14px rgba(27,43,75,.5)}
+.btn:hover i svg{animation:nudge .6s var(--ease-out)}
+.btn--ghost:hover{border-color:var(--aqua)}
+.btn--ghost:hover i{background:rgba(75,167,179,.12)}
+.btn:active{transform:translateY(0) scale(.97)}
+.btn-shine>span i{transition:transform .3s var(--ease-spring)}
+.btn-shine:hover>span i{transform:translateX(3px) rotate(-8deg)}
+.btn-shine:active{transform:scale(.97)}
+@keyframes nudge{0%{transform:none}40%{transform:translateY(3px)}70%{transform:translateY(-1px)}100%{transform:none}}
+a[href="#ficha"].btn:hover i svg,a.btn-shine:hover i svg{animation:none}
+a[href="#ficha"].btn:hover i{transform:translateX(3px)}
+
+/* Navegação do carrossel */
+.car-nav button{transition:transform .25s var(--ease-spring),background-color .25s ease,border-color .25s ease,color .25s ease}
+.car-nav button:hover{background:var(--aqua);border-color:var(--aqua);color:var(--navy);transform:scale(1.08)}
+.car-nav button:active{transform:scale(.92)}
+
+/* Acordeões: o + gira suave, abertura com fade */
+.acc summary,.faq summary{transition:color .25s ease}
+.acc summary:hover,.faq summary:hover{color:var(--aqua)}
+.acc summary span,.faq summary span{display:inline-block;transition:transform .45s var(--ease-spring)}
+.faq details{transition:background-color .3s ease,box-shadow .3s ease}
+.faq details:hover{box-shadow:0 10px 24px -18px rgba(27,43,75,.4)}
+.faq details[open]{background:#fff;box-shadow:0 12px 30px -20px rgba(27,43,75,.45)}
+.faq details[open] p,.acc[open] .tbl-wrap,.acc[open]>p{animation:tabIn .45s var(--ease-out) both}
+
+/* Links da navbar e pill de RI */
+.msn-button{transition:transform .25s var(--ease-spring),background-color .2s ease,box-shadow .25s ease}
+.msn-button:active{transform:scale(.95)}
+
+@media (prefers-reduced-motion:reduce){.tabs__pill{transition:none}.tabpanel.on *,.faq details[open] p{animation:none!important}}
+
+/* título do hero: 3 linhas no desktop, quebra livre no celular */
+.h1{text-wrap:nowrap}
+@media (max-width:767px){.br-d{display:none}.h1{text-wrap:balance}}
+
+/* ===== Navbar: menu sanduíche (celular e tablet) ===== */
+.msn-burger{display:none;position:relative;width:48px;height:48px;border:0;border-radius:999px;background:#1B2B4B;cursor:pointer;flex:none;pointer-events:auto;transition:transform .25s var(--ease-spring),background .2s ease}
+.msn-burger span{position:absolute;left:15px;right:15px;height:2px;border-radius:2px;background:#fff;transition:transform .45s var(--ease-spring),opacity .2s ease,top .3s ease}
+.msn-burger span:nth-child(1){top:17px}.msn-burger span:nth-child(2){top:23px}.msn-burger span:nth-child(3){top:29px}
+.msn-burger:active{transform:scale(.92)}
+.msn-nav.is-open .msn-burger span:nth-child(1){top:23px;transform:rotate(45deg)}
+.msn-nav.is-open .msn-burger span:nth-child(2){opacity:0;transform:scaleX(.2)}
+.msn-nav.is-open .msn-burger span:nth-child(3){top:23px;transform:rotate(-45deg)}
+.msn-menu{display:none}
+@media (max-width:1024px){
+  .msn-links,.msn-button--top{display:none!important}
+  .msn-burger{display:block}
+  .msn-nav{flex-direction:column;align-items:center}
+  .msn-shell,.msn-nav.is-floating .msn-shell,.msn-nav.is-compact .msn-shell{max-width:min(720px,100%);height:64px;margin-top:10px;padding:0 8px 0 22px}
+  .msn-nav.is-compact .msn-brand img,.msn-brand img{height:28px}
+  .msn-menu{display:flex;flex-direction:column;pointer-events:none;width:min(720px,100%);margin-top:10px;padding:10px;border-radius:26px;
+    background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(170%) blur(18px);backdrop-filter:saturate(170%) blur(18px);
+    border:1px solid rgba(174,175,178,.35);box-shadow:0 24px 50px -24px rgba(27,43,75,.5);
+    opacity:0;transform:translateY(-10px) scale(.98);transform-origin:top center;visibility:hidden;transition:opacity .3s ease,transform .45s var(--ease-spring),visibility 0s linear .45s}
+  .msn-nav.is-open .msn-menu{pointer-events:auto;opacity:1;transform:none;visibility:visible;transition:opacity .3s ease,transform .45s var(--ease-spring),visibility 0s}
+  .msn-menu a:not(.msn-button){display:flex;align-items:center;gap:14px;padding:16px 16px;border-radius:16px;color:#1B2B4B;font-size:19px;font-weight:600;
+    opacity:0;transform:translateY(8px);transition:background .2s ease,opacity .35s ease,transform .45s var(--ease-out)}
+  .msn-menu a:not(.msn-button) span{font-size:12px;font-weight:600;color:#4BA7B3;letter-spacing:.06em;min-width:22px}
+  .msn-menu a:not(.msn-button):hover,.msn-menu a[aria-current="location"]{background:rgba(75,167,179,.1)}
+  .msn-menu a:not(.msn-button)+a:not(.msn-button){border-top:1px solid rgba(174,175,178,.18)}
+  .msn-nav.is-open .msn-menu a{opacity:1;transform:none}
+  .msn-nav.is-open .msn-menu a:nth-child(1){transition-delay:.04s}.msn-nav.is-open .msn-menu a:nth-child(2){transition-delay:.08s}
+  .msn-nav.is-open .msn-menu a:nth-child(3){transition-delay:.12s}.msn-nav.is-open .msn-menu a:nth-child(4){transition-delay:.16s}
+  .msn-nav.is-open .msn-menu a:nth-child(5){transition-delay:.2s}.msn-nav.is-open .msn-menu a:nth-child(6){transition-delay:.24s}
+  .msn-menu__cta{margin-top:8px;width:100%;height:56px;font-size:15px;opacity:0;transform:translateY(8px)}
+  .msn-nav.is-open .msn-menu__cta{opacity:1;transform:none}
+}
+@media (max-width:560px){
+  .msn-nav{padding:0 12px}
+  .msn-shell,.msn-nav.is-floating .msn-shell,.msn-nav.is-compact .msn-shell{height:58px;padding:0 6px 0 18px}
+  .msn-burger{width:46px;height:46px}.msn-burger span{left:14px;right:14px}
+  .msn-burger span:nth-child(1){top:16px}.msn-burger span:nth-child(2){top:22px}.msn-burger span:nth-child(3){top:28px}
+  .msn-nav.is-open .msn-burger span:nth-child(1),.msn-nav.is-open .msn-burger span:nth-child(3){top:22px}
+  .msn-brand img,.msn-nav.is-compact .msn-brand img{height:26px}
+}
+
+/* ===== Responsivo final: tablet = colunas do desktop; celular = layouts próprios ===== */
+.cart-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px;align-items:start}
+
+/* TABLET (768–1024): mesmas colunas do desktop, espaçamentos menores */
+@media (min-width:768px) and (max-width:1024px){
+  .wrap{padding:0 28px}
+  .section{padding:96px 28px}
+  .hl{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:44px}
+  .hl>div{padding:16px;gap:10px;font-size:13.5px}
+  .hl span.ic{width:34px;height:34px}
+  .logos__grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;padding:32px 28px}
+  .logo .box{height:56px;padding:8px 10px}
+  .logo .kicker{font-size:10px}
+  .g3{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+  .g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .feat{min-height:260px;padding:22px}.feat h3{font-size:19px}.feat p{font-size:13px}
+  .bignum{font-size:40px}
+  .tcard{padding:20px}.tcard .v{font-size:17px}
+  .dcard{padding:22px}.dcard .big{font-size:30px}
+  .dchart{padding:18px}
+  .cart-grid{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:28px}
+  .fact{grid-template-columns:96px minmax(0,1fr);gap:12px}
+  .pcard{padding:20px}
+  .footer__grid{grid-template-columns:1.3fr 1fr 1fr;gap:28px}
+  .ccard{width:min(330px,44vw)}
+}
+
+/* CELULAR (até 767) */
+@media (max-width:767px){
+  .aviso{display:none}
+  .wrap{padding:0 20px}
+  .section{padding:72px 20px}
+  .hero__inner{padding:96px 20px 64px}
+  .hero__copy{margin-top:36px}
+  .lead{font-size:16px}
+  .hero__cta{flex-direction:column;align-items:center;gap:10px}
+  .hero__cta>a{width:100%;max-width:320px;justify-content:center}
+  .hl{grid-template-columns:1fr;gap:10px;margin-top:36px}
+  .hero__scroll{display:none}
+  .logos__grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 10px;padding:32px 20px}
+  .logo:last-child{grid-column:1/-1}
+  .logo .box{height:58px}
+  .g3,.g2{grid-template-columns:1fr}
+  .feat{min-height:220px}
+  .tabs{display:flex;width:100%;max-width:360px;margin-left:auto;margin-right:auto}
+  .tabs button{flex:1;white-space:nowrap;padding:11px 8px;font-size:13px}
+  .rows--2{grid-template-columns:1fr}
+  .row{grid-template-columns:30px minmax(0,1fr) 18px;gap:12px;padding:18px 0}
+  .row .k{font-size:16px}
+  .cart-grid{grid-template-columns:1fr;gap:36px}
+  .fact{grid-template-columns:104px minmax(0,1fr);gap:12px}
+  .pcard{padding:18px}
+  .pgrid{grid-template-columns:1fr}
+  .emp-band{margin-top:64px}
+  .emp-head{margin-bottom:24px}
+  .car-nav{display:none}
+  .dcard .big{font-size:34px}
+  .cta{margin-top:72px;border-radius:20px}
+  .cta>div{flex-direction:column;align-items:center}
+  .footer{margin-top:72px}
+  .footer__grid{grid-template-columns:1fr;gap:28px}
+  .footer .wrap{padding-top:56px!important}
+  .h2{font-size:28px}
+}
+.msn-menu .msn-menu__cta span{display:inline!important}.msn-menu .msn-menu__cta{padding:0 26px!important;color:#fff}
+
+/* grades nunca vazam por causa de canvas; padding único nas seções em telas menores */
+.grid>*,.cart-grid>*,.pgrid>*{min-width:0}
+@media (max-width:1024px){.section>.wrap{padding-left:0;padding-right:0}}
+
+/* ajustes finos: rótulos da carteira empilhados e valores grandes sem quebra em telas menores */
+@media (max-width:1024px){
+  .fact{grid-template-columns:1fr!important;gap:4px!important;padding:14px 0}
+  .dcard .big{white-space:nowrap}
+}
+@media (min-width:768px) and (max-width:1024px){
+  .dcard .big{font-size:clamp(24px,3.1vw,30px)}
+  .dcard .top{font-size:11.5px}
+  .badge{font-size:9px;padding:4px 8px}
+}
+
+/* nada vaza para os lados: carrossel e datas animadas ficam contidos */
+body{overflow-x:clip}
+#cronograma,#dados{overflow-x:clip}
+</style>
+</head>
+<body>
+
+<!-- 0. COMPLIANCE -->
+<div class="compliance"><div class="tarja">Material publicitário</div>
+<div class="aviso" id="aviso"><b>LEIA O PROSPECTO, A LÂMINA E O REGULAMENTO DO FUNDO ANTES DE ACEITAR A OFERTA</b>, EM ESPECIAL A SEÇÃO "FATORES DE RISCO". O INVESTIMENTO NAS COTAS REPRESENTA UM INVESTIMENTO DE RISCO.</div></div>
+
+<div class="msn-progress" id="msnProgress" aria-hidden="true"></div>
+<nav class="msn-nav" id="msnNav" aria-label="Navegação principal">
+  <div class="msn-shell">
+    <a class="msn-brand" href="#hero" aria-label="Ir para o topo"><img src="assets/logo-exes-navy.png" alt="Éxes"></a>
+    <div class="msn-links"><a href="#entenda">A emissão</a><a href="#participar">Como participar</a><a href="#dados">Dados</a><a href="#carteira">Carteira</a><a href="#cronograma">Cronograma</a></div>
+    <div class="msn-actions"><a class="msn-button msn-button--top" href="mailto:ri@exes.com.br"><span>Fale com o RI</span><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></i></a><button class="msn-burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="msnMenu"><span></span><span></span><span></span></button></div>
+  </div>
+  <div class="msn-menu" id="msnMenu" aria-hidden="true">
+    <a href="#entenda"><span>01</span>A emissão</a>
+    <a href="#participar"><span>02</span>Como participar</a>
+    <a href="#dados"><span>03</span>Dados</a>
+    <a href="#carteira"><span>04</span>Carteira</a>
+    <a href="#cronograma"><span>05</span>Cronograma</a>
+    <a class="msn-button msn-menu__cta" href="mailto:ri@exes.com.br"><span>Fale com o RI</span><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></i></a>
+  </div>
+</nav>
+
+<!-- 1. HERO (vídeo controlado pelo scroll) -->
+<section class="hero" id="hero">
+  <div class="hero__media">
+    <video id="heroVideo" muted playsinline preload="metadata" poster="assets/hero-poster.jpg">
+      <source src="assets/hero.mp4" type="video/mp4">
+    </video>
+    <img id="heroPoster" src="assets/hero-poster.jpg" alt="">
+    <div class="hero__fade"></div>
+  </div>
+  <div class="hero__inner">
+
+    <div class="hero__copy">
+      <div class="float float--a"><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4BA7B3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 6-6 4 4 8-8M14 7h7v7"/></svg></i><div><small>Rendimento 12 meses*</small><b>17,13%</b></div></div>
+      <div class="float float--b"><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4BA7B3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/></svg></i><div><small>Mínimo</small><b>10 cotas (R$ 99,10)</b></div></div>
+
+      <span class="pill"><i></i>6ª EMISSÃO · EXES11</span>
+      <h1 class="h1">EXES11 abre a <span>6ª emissão</span>:<br class="br-d"> tudo o que você precisa<br class="br-d"> para orientar seus clientes</h1>
+      <p class="lead">Condições, cronograma, regras para cotistas e para o público em geral e dados da carteira, para apoiar a sua conversa com o cliente.</p>
+      <div class="hero__cta">
+        <a class="btn-shine" href="#cta"><span><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i>CLIQUE AQUI PARA [X]</span></a>
+        <a class="btn btn--ghost" href="#cronograma"><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4BA7B3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></i>Ver cronograma</a>
+      </div>
+
+      <div class="hl">
+        <div><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4BA7B3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.5h3.5a1.75 1.75 0 0 1 0 3.5h-2a1.75 1.75 0 0 0 0 3.5H15"/></svg></span><div><strong>R$ 9,91 por cota</strong>, investimento mínimo de 10 cotas (R$ 99,10).</div></div>
+        <div><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4BA7B3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18M6 16V9M11 16V5M16 16v-7M21 16V11"/></svg></span><div><strong>R$ 250 milhões de volume base</strong>, com lote adicional de até 25%.</div></div>
+        <div><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4BA7B3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 6-6 4 4 8-8M14 7h7v7"/></svg></span><div><strong>17,13% em rendimentos em 12 meses</strong>, sobre a cota patrimonial (set/25 a ago/26).*</div></div>
+      </div>
+      <p class="legal" style="margin-top:20px;max-width:620px;margin-inline:auto">*Rentabilidade passada não representa garantia de rentabilidade futura.</p>
+      <div class="hero__scroll">Role para continuar<i></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. LOGOS -->
+<section class="logos">
+  <div class="logos__grid">
+    <div class="logo"><div class="kicker">Gestor</div><div class="box"><img src="assets/logo-exes-white.png" alt="Éxes Gestora de Recursos"></div></div>
+    <div class="logo"><div class="kicker">Coordenador Líder</div><div class="box"><img src="assets/logo-exes-white.png" alt="Éxes" style="max-height:60%"><small>Serviços Financeiros</small></div></div>
+    <div class="logo"><div class="kicker">Administrador</div><div class="box"><img src="assets/logo-btg-white.png" alt="BTG Pactual"></div></div>
+    <div class="logo"><div class="kicker">Assessor Legal</div><div class="box"><img src="assets/logo-cepeda-white.png" alt="CEPEDA Advogados"></div></div>
+    <div class="logo"><div class="kicker">Selos ANBIMA</div><div class="box seals"><img src="assets/selo-anbima-gestao.png" alt="ANBIMA Gestão de Recursos"><img src="assets/selo-anbima-admin.jpg" alt="ANBIMA Administração Fiduciária"></div></div>
+  </div>
+</section>
+
+<!-- 3. ENTENDA -->
+<section class="section" id="entenda" style="padding-bottom:0">
+  <div class="wrap">
+    <div class="center" style="max-width:760px;margin:0 auto">
+      <span class="eyebrow"><i></i>Entenda a 6ª emissão</span>
+      <h2 class="h2" style="margin-top:16px">Entenda a <span>6ª emissão</span></h2>
+      <p class="sub" style="margin-top:18px">É uma oferta primária: o próprio fundo emite cotas novas, e os recursos entram no patrimônio do EXES11 para a compra de recebíveis imobiliários, majoritariamente CRI, LCI e LIG.</p>
+      <a class="btn btn--ghost" href="#ficha" style="margin-top:22px;padding:6px 18px 6px 6px"><i style="width:32px;height:32px;background:#4BA7B3;border:0"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i>Ver ficha técnica</a>
+    </div>
+    <div class="grid g3" style="margin-top:56px">
+      <div class="spot spot--ring feat"><img src="assets/card-streaks.jpg" alt=""><div><h3>Oferta primária</h3><p>O próprio fundo emite cotas novas, e os recursos entram no patrimônio do EXES11.</p></div></div>
+      <div class="spot spot--ring feat"><img src="assets/card-blades.jpg" alt=""><div><h3>Para onde vai o dinheiro</h3><p>Para a compra de recebíveis imobiliários, majoritariamente CRI, LCI e LIG.</p></div></div>
+      <div class="spot spot--ring feat feat--light"><div><div class="bignum">R$ 9,91</div><div style="margin-top:8px;font-size:14px;color:var(--gra)">por cota · volume base de R$ 250 milhões, com lote adicional de até 25%</div></div><div style="border-top:1px solid rgba(174,175,178,.3);padding-top:16px;font-size:14px;font-weight:500">Investimento mínimo de 10 cotas (R$ 99,10)</div></div>
+    </div>
+    <div class="grid g2" style="margin-top:40px">
+      <div class="spot spot--ring cmp"><div class="kicker">Secundária anterior</div>
+        <ul><li>O ofertante era um cotista vendedor.</li><li>Nada ingressava no patrimônio do Fundo.</li><li>A quantidade de cotas não se alterava.</li></ul></div>
+      <div class="spot spot--ring cmp cmp--new"><div class="kicker" style="color:var(--aqua)">6ª emissão</div>
+        <ul><li>O ofertante é o próprio Fundo, que emite cotas novas.</li><li>Os recursos captados, líquidos dos custos, ingressam no patrimônio do EXES11.</li><li>Preço por cota de R$ 9,91, volume base de R$ 250 milhões e lote adicional de até 25%.</li></ul></div>
+    </div>
+    <p class="legal" style="margin-top:14px">Comparativo conforme as páginas 2 e 55 do material publicitário.</p>
+  </div>
+</section>
+
+<!-- 4. COMO PARTICIPAR -->
+<section class="section section--off" id="participar" style="margin-top:120px">
+  <div class="wrap center">
+    <span class="eyebrow"><i></i>Como participar</span>
+    <h2 class="h2" style="margin:16px auto 0;max-width:760px">Como seus clientes <span>podem participar</span></h2>
+    <div class="tabs" role="tablist"><span class="tabs__pill" aria-hidden="true"></span>
+      <button class="on" data-tab="cotistas">Clientes cotistas</button>
+      <button data-tab="publico">Público em geral</button>
+    </div>
+
+    <div class="tabpanel on" id="tab-cotistas">
+      <div class="grid g3" style="margin-top:40px">
+        <div class="spot spot--ring tcard"><div class="n">01</div><div class="kicker" style="margin-top:16px">Data de corte</div><div class="v">15/10/26</div></div>
+        <div class="spot spot--ring tcard"><div class="n">02</div><div class="kicker" style="margin-top:16px">Direito de preferência</div><div class="v">19 a 29/10/26, na B3</div><p>Fator de 1,78896745052195 cota nova por cota detida.</p></div>
+        <div class="spot spot--ring tcard"><div class="n">03</div><div class="kicker" style="margin-top:16px">Regras</div><div class="v">Cessão vedada e sem período de sobras</div></div>
+      </div>
+      <div class="mtl"><div class="mtl__row">
+        <div class="mtl__it"><i></i><b>15/10</b><small>Data de corte</small></div>
+        <div class="mtl__it"><i></i><b>19 a 29/10</b><small>Preferência na B3</small></div>
+        <div class="mtl__it"><i></i><b>30/10 e 03/11</b><small>Liquidação</small></div>
+      </div></div>
+      <p class="legal" style="margin-top:18px">Fator da página 4 do material publicitário.</p>
+    </div>
+
+    <div class="tabpanel" id="tab-publico">
+      <div class="grid g3" style="margin-top:40px">
+        <div class="spot spot--ring tcard"><div class="n">01</div><div class="kicker" style="margin-top:16px">Subscrição</div><div class="v">04 a 18/11/26</div><p>Mínimo de 10 cotas (R$ 99,10).</p></div>
+        <div class="spot spot--ring tcard"><div class="n">02</div><div class="kicker" style="margin-top:16px">Critério</div><div class="v">Rateio proporcional aos valores subscritos</div></div>
+        <div class="spot spot--ring tcard"><div class="n">03</div><div class="kicker" style="margin-top:16px">Alocação e liquidação</div><div class="v">19/11/26 e 25/11/26</div></div>
+      </div>
+      <div class="mtl"><div class="mtl__row">
+        <div class="mtl__it"><i></i><b>04 a 18/11</b><small>Subscrição</small></div>
+        <div class="mtl__it"><i></i><b>19/11</b><small>Alocação</small></div>
+        <div class="mtl__it"><i></i><b>25/11</b><small>Liquidação</small></div>
+      </div></div>
+      <p class="legal" style="margin-top:18px">Subscrição com mínimo de 10 cotas (R$ 99,10).</p>
+    </div>
+
+    <a class="btn-shine" href="#cta" style="margin-top:36px"><span><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i>CLIQUE AQUI PARA [X]</span></a>
+  </div>
+</section>
+
+<!-- 5. CONDIÇÕES COMERCIAIS -->
+<section class="section" id="condicoes" style="padding-bottom:0">
+  <div class="wrap">
+    <div class="center"><span class="eyebrow"><i></i>Condições comerciais</span><h2 class="h2" style="margin-top:16px">Condições <span>comerciais</span></h2></div>
+    <div class="rows" style="margin-top:48px">
+      <div class="row"><div class="n">01</div><div><div class="k">Taxa de administração e gestão</div><div class="v">1,00% ao ano sobre o patrimônio líquido</div></div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4BA7B3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
+      <div class="row"><div class="n">02</div><div><div class="k">Taxa de performance</div><div class="v">Não há</div></div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4BA7B3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
+      <div class="row"><div class="n">03</div><div><div class="k">Custos da oferta</div><div class="v">72,5% pelos subscritores, no preço de emissão, e 27,5% pela Gestora, que arca com parte da comissão de distribuição</div></div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4BA7B3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
+      <div class="row"><div class="n">04</div><div><div class="k">Formador de mercado</div><div class="v">Suno Desenvolvimento Ltda., com 50% da remuneração suportada pelo Gestor</div></div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4BA7B3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
+      <div class="row"><div class="n">05</div><div><div class="k">Taxa de distribuição e remuneração da rede</div><div class="v">3,5%*</div></div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4BA7B3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
+    </div>
+    <p class="legal" style="margin-top:20px">* Percentual de referência pago a instituição participante da Oferta. A remuneração efetiva do assessor depende do percentual repassado (rebate) pela plataforma à qual ele está vinculado (XP, BTG ou outros), conforme o contrato entre assessor e a plataforma.</p>
+    <p class="legal" style="margin-top:8px">Este resumo não constitui recomendação de investimento. A indicação da oferta depende da adequação ao perfil (suitability) de cada investidor.</p>
+  </div>
+</section>
+
+<!-- 6. TESE -->
+<section class="section tese" id="tese" style="margin-top:120px">
+  <div class="wrap center">
+    <span class="eyebrow"><i></i>A tese</span>
+    <h2 class="h2" style="margin-top:16px">A tese em quatro pilares</h2>
+    <p style="margin-top:12px;font-size:14px;color:rgba(255,255,255,.75)">Leitura da Gestora, carteira de 31/08/2026.</p>
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:48px">
+      <div class="spot spot--ring glass"><div class="g">01</div><h3>Distribuições</h3><p>R$ 0,13 por cota em cada um dos 20 meses de jan/25 a ago/26.</p><div class="chart-box"><canvas id="chPilar1"></canvas></div></div>
+      <div class="spot spot--ring glass"><div class="g">02</div><h3>Rendimento</h3><p>17,13% em 12 meses sobre a cota patrimonial, ou 117,13% do CDI do período.</p><div class="chart-box"><canvas id="chPilar2"></canvas></div></div>
+      <div class="spot spot--ring glass"><div class="g">03</div><h3>Garantias</h3><p>LTV médio de 52,18%, nenhuma operação acima de 70% e toda a carteira de crédito com mitigante.</p><div class="chart-box"><canvas id="chPilar3"></canvas></div></div>
+      <div class="spot spot--ring glass"><div class="g">04</div><h3>Originação</h3><p>72% da carteira de crédito originada e estruturada pela própria Gestora.</p><div class="chart-box"><canvas id="chPilar4"></canvas></div></div>
+    </div>
+    <p class="legal" style="margin:32px auto 0;max-width:900px;color:rgba(255,255,255,.75)">A Gestora suporta 27,5% dos custos da oferta e 50% da remuneração do formador de mercado. Rendimento isento de IR para pessoa física. Rentabilidade passada não representa garantia de rentabilidade futura. Fonte: página 7, leitura da Gestora, carteira de 31/08/2026.</p>
+  </div>
+</section>
+
+<!-- 7. DADOS PARA A CONVERSA -->
+<section class="section section--navy" id="dados" style="padding-left:0;padding-right:0;border-top:1px solid rgba(255,255,255,.08)">
+  <div class="wrap center">
+    <span class="eyebrow"><i></i>Dados</span>
+    <h2 class="h2" style="margin:16px auto 0;max-width:760px">Dados para a conversa <span>com o cliente</span></h2>
+    <p class="sub" style="margin:18px auto 0;max-width:820px;font-size:15px">De jun/22 a ago/26, o retorno total do EXES11 foi de +60,8%, contra +34,6% do IFIX e +18,2% do IPCA. Em 12 meses, 17,13% contra 14,63% do CDI e 8,23% do IFIX. Em agosto de 2026, o fundo ficou em 1º no DY patrimonial entre os FIIs de recebíveis analisados e esteve no Top 10 em 15 dos 15 meses.</p>
+  </div>
+  <div class="wrap" style="margin-top:48px">
+    <div class="car-nav"><button data-car="-1" aria-label="Anterior"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button><button data-car="1" aria-label="Próximo"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button></div>
+    <div class="car" id="car">
+      <article class="spot spot--ring ccard"><div class="kicker">Retorno total desde jun/22</div><div class="t">EXES11 × IFIX × IPCA</div><div class="chart-box"><canvas id="chRet"></canvas></div><p class="note">Base 100 em jun/22. EXES11 pela cota de mercado com rendimentos reinvestidos, jun/22 a ago/26. Fontes: Éxes, BTG Pactual, B3, Banco Central e Comdinheiro. Rentabilidade passada não representa garantia de rentabilidade futura.</p></article>
+      <article class="spot spot--ring ccard"><div class="kicker">Últimos 12 meses</div><div class="t">EXES11 × CDI × IFIX × IPCA</div><div class="chart-box"><canvas id="ch12m"></canvas></div><p class="note">Set/25 a ago/26, sobre a cota patrimonial. A comparação com o CDI confronta rendimento isento com CDI bruto. Rentabilidade passada não representa garantia de rentabilidade futura.</p></article>
+      <article class="spot spot--ring ccard"><div class="kicker">DY mensal · últimos 12 meses</div><div class="t">Isento × bruto equivalente</div><div class="chart-box"><canvas id="chDY"></canvas></div><p class="note">Rendimento distribuído no mês dividido pela cota patrimonial do último dia útil. Bruto equivalente: o que uma aplicação tributada a 15% precisaria render para entregar o mesmo líquido. Rentabilidade passada não representa garantia de rentabilidade futura.</p></article>
+      <article class="spot spot--ring ccard"><div class="kicker">Ranking mensal · jun/25 a ago/26</div><div class="t">Posição no DY patrimonial</div><div class="chart-box"><canvas id="chRank"></canvas></div><p class="note">Entre 87 FIIs de recebíveis (71 com dados em ago/2026). Fonte: Éxes e Comdinheiro. Top 10 em 15 de 15 meses. Rentabilidade passada não representa garantia de rentabilidade futura.</p></article>
+      <article class="spot spot--ring ccard"><div class="kicker">Agosto de 2026</div><div class="t">Top 10 em DY patrimonial (% a.a.)</div>
+        <div class="rank">
+          <div class="me"><span>1</span><span>EXES11</span><span>16,21%</span></div>
+          <div><span>2</span><span>FII de recebíveis</span><span>15,41%</span></div>
+          <div><span>3</span><span>FII de recebíveis</span><span>14,85%</span></div>
+          <div><span>4</span><span>FII de recebíveis</span><span>14,81%</span></div>
+          <div><span>5</span><span>FII de recebíveis</span><span>14,73%</span></div>
+          <div><span>6</span><span>FII de recebíveis</span><span>14,60%</span></div>
+          <div><span>7</span><span>FII de recebíveis</span><span>14,58%</span></div>
+          <div><span>8</span><span>FII de recebíveis</span><span>14,50%</span></div>
+          <div><span>9</span><span>FII de recebíveis</span><span>14,42%</span></div>
+          <div><span>10</span><span>FII de recebíveis</span><span>14,36%</span></div>
+        </div>
+        <p class="note">DY patrimonial = proventos de 12 meses ÷ cota patrimonial contábil. Os demais fundos do Top 10 não são identificados. Fonte: Éxes e Comdinheiro, página 10. Rentabilidade passada não representa garantia de rentabilidade futura.</p></article>
+    </div>
+  </div>
+  <div class="wrap center" style="margin-top:32px">
+    <p class="legal" style="margin:0 auto;max-width:900px">EXES11 pela cota de mercado com rendimentos reinvestidos (desde jun/22) e sobre a cota patrimonial (12 meses). A comparação com o CDI confronta rendimento isento com CDI bruto. Fontes: Éxes, BTG Pactual, B3, Banco Central e Comdinheiro. Rentabilidade passada não representa garantia de rentabilidade futura.</p>
+    <a class="btn-shine btn-shine--light" href="#cta" style="margin-top:32px"><span><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i>CLIQUE AQUI PARA [X]</span></a>
+  </div>
+</section>
+
+<!-- 8. QUALIDADE DA CARTEIRA -->
+<section class="section section--off" id="carteira">
+  <div class="wrap cart-grid">
+    <div>
+      <span class="eyebrow"><i></i>Qualidade da carteira</span>
+      <h2 class="h2" style="margin-top:16px">Qualidade <span>da carteira</span></h2>
+      <div class="facts">
+        <div class="fact"><b>Patrimônio</b><span>R$ 135,7 milhões</span></div>
+        <div class="fact"><b>Composição</b><span>18 operações de crédito em seis estados, uma cota de fundo listado e caixa</span></div>
+        <div class="fact"><b>Concentração</b><span>Maior exposição de 6,29% do patrimônio, e nenhuma acima de 10%</span></div>
+        <div class="fact"><b>Obras</b><span>Acompanhadas todo mês por agente de medição independente, com ILG mínimo contratual de 130%</span></div>
+        <div class="fact"><b>Mitigantes</b><span>Aval da Cyrela (AAA.br), emissão da São Carlos (A+.br) e imóvel locado à Ânima (AA(bra)). Os ratings são das contrapartes, e não do fundo.</span></div>
+      </div>
+      <div class="ratings">
+        <div class="rating"><img src="assets/logo-saocarlos.png" alt="São Carlos"><div><b>A+.br</b><small>Moody's Local · perspectiva estável</small></div></div>
+        <div class="rating"><img src="assets/logo-moodys.png" alt="Moody's"><div><b>AAA.br · Cyrela</b><small>avalista da EBM · Moody's Local</small></div></div>
+        <div class="rating"><img src="assets/logo-anima.png" alt="Ânima"><div><b>AA(bra)</b><small>Fitch · locatária de Duarte e Lima</small></div></div>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>12</b><small>projetos com componente de obra</small></div>
+        <div class="stat"><b>4 de 12</b><small>obras concluídas, com Habite-se ou em operação</small></div>
+        <div class="stat"><b>64%</b><small>evolução física média dos doze projetos</small></div>
+        <div class="stat"><b>46%</b><small>evolução média das oito obras em andamento</small></div>
+      </div>
+    </div>
+    <div class="pcard">
+      <h3>Gráficos da carteira</h3>
+      <div class="pgrid">
+        <div class="spot spot--ring mini"><div class="kicker">Composição do patrimônio (%)</div><div class="chart-box"><canvas id="chComp"></canvas></div></div>
+        <div class="spot spot--ring mini"><div class="kicker">Carteira de crédito por UF (%)</div><div class="chart-box"><canvas id="chUF"></canvas></div></div>
+        <div class="spot spot--ring mini full tall"><div class="kicker">Setores da carteira de crédito (% do PL)</div><div class="chart-box"><canvas id="chSet"></canvas></div></div>
+        <div class="spot spot--ring mini full tall"><div class="kicker">Concentração por operação (% do PL) · limite de 10%</div><div class="chart-box"><canvas id="chConc"></canvas></div></div>
+        <div class="spot spot--ring mini full tall"><div class="kicker">LTV por operação (%) · teto de 70%</div><div class="chart-box"><canvas id="chLTV"></canvas></div></div>
+      </div>
+      <p class="legal" style="margin-top:12px">Fonte: Éxes Gestora de Recursos; BTG Pactual. Posição de 31/08/2026. LTV apurado a valor de mercado das garantias. Páginas 15, 18 e 19 do material publicitário.</p>
+      <details class="acc">
+        <summary>Ver carteira completa <span>+</span></summary>
+        <div class="tbl-wrap"><table class="tbl">
+          <thead><tr><th>Contraparte</th><th>Segmento</th><th>Classe</th><th>UF</th><th>Taxa</th><th>Volume (R$)</th><th>LTV</th><th>Garantia/dívida</th><th>% do PL</th></tr></thead>
+          <tbody>
+          <tr><td>Acoi – Ilhas Gregas</td><td>Incorporação Residencial</td><td>Única</td><td>SP</td><td>CDI + 4,00%</td><td>8.531.623</td><td>61,77%</td><td>1,62x</td><td>6,29%</td></tr>
+          <tr><td>Duarte e Lima (Ânima)</td><td>Educacional</td><td>Única</td><td>BA</td><td>IPCA + 10,50%</td><td>7.815.115</td><td>37,34%</td><td>2,68x</td><td>5,76%</td></tr>
+          <tr><td>Mont Blanc</td><td>Incorporação Residencial</td><td>Única</td><td>BA</td><td>CDI + 5,00%</td><td>7.752.497</td><td>56,67%</td><td>1,76x</td><td>5,71%</td></tr>
+          <tr><td>Persa – Spot Smart Living</td><td>Incorporação Residencial</td><td>Sênior</td><td>MG</td><td>CDI + 5,00%</td><td>7.736.944</td><td>61,20%</td><td>1,63x</td><td>5,70%</td></tr>
+          <tr><td>NMC – Primus Park</td><td>Incorporação Residencial</td><td>Sênior</td><td>GO</td><td>CDI + 4,00%</td><td>7.633.460</td><td>40,52%</td><td>2,47x</td><td>5,63%</td></tr>
+          <tr><td>Maxi – Tramonto</td><td>Incorporação Residencial</td><td>Sênior</td><td>MG</td><td>CDI + 3,75%</td><td>7.344.290</td><td>60,78%</td><td>1,65x</td><td>5,41%</td></tr>
+          <tr><td>São Carlos</td><td>Lajes comerciais</td><td>Única</td><td>SP</td><td>IPCA + 7,38%</td><td>7.206.073</td><td>–</td><td>–</td><td>5,31%</td></tr>
+          <tr><td>São Vicente</td><td>Locação comercial</td><td>Única</td><td>SP</td><td>IPCA + 8,61%</td><td>7.121.894</td><td>52,47%</td><td>1,91x</td><td>5,25%</td></tr>
+          <tr><td>FGR</td><td>Residencial pulverizado</td><td>Única</td><td>GO</td><td>IPCA + 9,50%</td><td>7.096.488</td><td>37,32%</td><td>2,68x</td><td>5,23%</td></tr>
+          <tr><td>Celeste</td><td>Energia</td><td>Única</td><td>MT</td><td>IPCA + 11,70%</td><td>6.565.580</td><td>43,40%</td><td>2,30x</td><td>4,84%</td></tr>
+          <tr><td>Persa Piatra</td><td>Incorporação Residencial</td><td>Sênior</td><td>MG</td><td>CDI + 5,00%</td><td>6.382.582</td><td>64,80%</td><td>1,54x</td><td>4,70%</td></tr>
+          <tr><td>EBM (Cyrela)</td><td>Venda de terreno</td><td>Única</td><td>SP</td><td>IPCA + 11,00%</td><td>6.346.482</td><td>–</td><td>–</td><td>4,68%</td></tr>
+          <tr><td>Raposo (Volpe)</td><td>Incorporação Residencial</td><td>Sênior</td><td>SP</td><td>CDI + 4,00%</td><td>6.030.337</td><td>57,84%</td><td>1,73x</td><td>4,45%</td></tr>
+          <tr><td>CRI NP38 – Joama</td><td>Incorporação Residencial</td><td>Única</td><td>n/d</td><td>CDI + 5,00%</td><td>5.503.907</td><td>60,98%</td><td>1,64x</td><td>4,06%</td></tr>
+          <tr><td>IC Construtora (Mahalo)</td><td>Incorporação Residencial</td><td>Única</td><td>ES</td><td>CDI + 6,00%</td><td>2.859.899</td><td>55,06%</td><td>1,82x</td><td>2,11%</td></tr>
+          <tr><td>Ávida</td><td>Loteamento</td><td>Única</td><td>MT</td><td>IPCA + 15,00%</td><td>1.290.236</td><td>6,33%</td><td>15,79x</td><td>0,95%</td></tr>
+          <tr><td>Totus – Spot Diadema</td><td>Incorporação Residencial</td><td>Única</td><td>SP</td><td>IPCA + 12,00%</td><td>1.118.736</td><td>58,66%</td><td>1,70x</td><td>0,82%</td></tr>
+          <tr><td>Congesa</td><td>Venda de terreno</td><td>Única</td><td>SP</td><td>IPCA + 9,00%</td><td>65.525</td><td>7,87%</td><td>12,71x</td><td>0,05%</td></tr>
+          <tr><td>Éxes Araguaia AGRX11</td><td>FIAGRO FII</td><td>Fundo listado</td><td>–</td><td>–</td><td>29.478.548</td><td>–</td><td>–</td><td>21,73%</td></tr>
+          <tr><td>BTG Tesouro Selic</td><td>Renda fixa</td><td>N/A</td><td>–</td><td>100% do CDI</td><td>1.986.211</td><td>–</td><td>–</td><td>1,46%</td></tr>
+          <tr class="total"><td>Total</td><td></td><td></td><td></td><td></td><td>135.866.427</td><td>52,18%</td><td>1,92x</td><td>100,00%</td></tr>
+          </tbody></table></div>
+        <p class="legal" style="margin-top:10px">Posição de 31/08/2026, página 16 do material publicitário. Garantia/dívida é a razão entre a garantia a valor de mercado e a dívida (inverso do LTV). Exposições São Carlos e EBM apoiadas em risco corporativo com rating.</p>
+      </details>
+    </div>
+  </div>
+
+  <div class="emp-band">
+    <div class="wrap emp-head">
+      <div><span class="eyebrow"><i></i>Os empreendimentos por trás do crédito</span>
+      <h3 class="h2" style="margin-top:12px;font-size:clamp(24px,2.4vw,32px)">Obras financiadas <span>pela carteira</span></h3></div>
+      <p class="sub" style="max-width:440px;font-size:14px">Cada CRI financia a construção ou o término de obras de um empreendimento, com garantia real sobre as unidades.</p>
+    </div>
+    <div class="marquee" aria-label="Empreendimentos da carteira">
+      <div class="marquee__track"><figure class="emp"><img src="assets/emp/volpe-campos-elisios.jpg" alt="Fachada do Volpe Campos Elísios" loading="lazy" style="object-position:50% 40%"><figcaption><span class="emp__pl">4,45% do PL</span><b>Volpe Campos Elísios</b><small>Raposo (Volpe) · Jundiaí/SP</small></figcaption></figure><figure class="emp"><img src="assets/emp/persa-spot-smart-living.jpg" alt="Fachada do Spot Smart Living" loading="lazy" style="object-position:45% 50%"><figcaption><span class="emp__pl">5,70% do PL</span><b>Spot Smart Living</b><small>Persa · Uberlândia/MG</small></figcaption></figure><figure class="emp"><img src="assets/emp/persa-piatra.jpg" alt="Fachada do Piatra" loading="lazy" style="object-position:42% 30%"><figcaption><span class="emp__pl">4,70% do PL</span><b>Piatra</b><small>Persa · Uberlândia/MG</small></figcaption></figure><figure class="emp"><img src="assets/emp/ic-mahalo.jpg" alt="Fachada do Mahalo" loading="lazy" style="object-position:50% 40%"><figcaption><span class="emp__pl">2,11% do PL</span><b>Mahalo</b><small>IC Construtora · Vila Velha/ES</small></figcaption></figure><figure class="emp"><img src="assets/emp/mont-blanc.jpg" alt="Fachada do Mont Blanc" loading="lazy" style="object-position:50% 40%"><figcaption><span class="emp__pl">5,71% do PL</span><b>Mont Blanc</b><small>Azinunes · Salvador/BA</small></figcaption></figure><figure class="emp"><img src="assets/emp/nmc-primus-park.jpg" alt="Fachada do Primus Park" loading="lazy" style="object-position:50% 35%"><figcaption><span class="emp__pl">5,63% do PL</span><b>Primus Park</b><small>NMC · Goiânia/GO</small></figcaption></figure><figure class="emp"><img src="assets/emp/maxi-tramonto.jpg" alt="Fachada do Tramonto" loading="lazy" style="object-position:50% 40%"><figcaption><span class="emp__pl">5,41% do PL</span><b>Tramonto</b><small>Maxi · Uberlândia/MG</small></figcaption></figure><figure class="emp"><img src="assets/emp/totus-spot-diadema.jpg" alt="Fachada do Spot Diadema" loading="lazy" style="object-position:50% 35%"><figcaption><span class="emp__pl">0,82% do PL</span><b>Spot Diadema</b><small>Totus · Diadema/SP</small></figcaption></figure><figure class="emp" aria-hidden="true"><img src="assets/emp/volpe-campos-elisios.jpg" alt="" loading="lazy" style="object-position:50% 40%"><figcaption><span class="emp__pl">4,45% do PL</span><b>Volpe Campos Elísios</b><small>Raposo (Volpe) · Jundiaí/SP</small></figcaption></figure><figure class="emp" aria-hidden="true"><img src="assets/emp/persa-spot-smart-living.jpg" alt="" loading="lazy" style="object-position:45% 50%"><figcaption><span class="emp__pl">5,70% do PL</span><b>Spot Smart Living</b><small>Persa · Uberlândia/MG</small></figcaption></figure><figure class="emp" aria-hidden="true"><img src="assets/emp/persa-piatra.jpg" alt="" loading="lazy" style="object-position:42% 30%"><figcaption><span class="emp__pl">4,70% do PL</span><b>Piatra</b><small>Persa · Uberlândia/MG</small></figcaption></figure><figure class="emp" aria-hidden="true"><img src="assets/emp/ic-mahalo.jpg" alt="" loading="lazy" style="object-position:50% 40%"><figcaption><span class="emp__pl">2,11% do PL</span><b>Mahalo</b><small>IC Construtora · Vila Velha/ES</small></figcaption></figure><figure class="emp" aria-hidden="true"><img src="assets/emp/mont-blanc.jpg" alt="" loading="lazy" style="object-position:50% 40%"><figcaption><span class="emp__pl">5,71% do PL</span><b>Mont Blanc</b><small>Azinunes · Salvador/BA</small></figcaption></figure><figure class="emp" aria-hidden="true"><img src="assets/emp/nmc-primus-park.jpg" alt="" loading="lazy" style="object-position:50% 35%"><figcaption><span class="emp__pl">5,63% do PL</span><b>Primus Park</b><small>NMC · Goiânia/GO</small></figcaption></figure><figure class="emp" aria-hidden="true"><img src="assets/emp/maxi-tramonto.jpg" alt="" loading="lazy" style="object-position:50% 40%"><figcaption><span class="emp__pl">5,41% do PL</span><b>Tramonto</b><small>Maxi · Uberlândia/MG</small></figcaption></figure><figure class="emp" aria-hidden="true"><img src="assets/emp/totus-spot-diadema.jpg" alt="" loading="lazy" style="object-position:50% 35%"><figcaption><span class="emp__pl">0,82% do PL</span><b>Spot Diadema</b><small>Totus · Diadema/SP</small></figcaption></figure></div>
+    </div>
+    <p class="legal wrap" style="margin-top:16px">Imagens de divulgação dos empreendimentos, meramente ilustrativas. Fontes: Éxes Gestora de Recursos (material publicitário da oferta, slide 17), Persa (piatrapersa.com.br) e páginas públicas dos empreendimentos no apto.vc. Percentual do PL conforme a carteira de 31/08/2026 (página 16).</p>
+  </div>
+</section>
+
+<!-- 9. PARA ONDE VAI O DINHEIRO -->
+<section class="section section--navy" id="destino">
+  <div class="wrap center">
+    <span class="eyebrow"><i></i>Uso dos recursos</span>
+    <h2 class="h2" style="margin:16px auto 0">Para onde vai <span>o dinheiro da oferta</span></h2>
+    <div class="grid g3" style="margin-top:48px;align-items:stretch">
+      <div class="spot spot--ring dcard"><div class="top">Hoje</div><div class="big">R$ 104,4 mi</div><div class="sm">carteira de crédito</div><div class="ft"><strong>18</strong> operações de crédito</div></div>
+      <div class="spot spot--ring dcard dcard--hi"><div class="top">Após a oferta <span class="badge">PROJEÇÃO DA GESTORA</span></div><div class="big">≈ R$ 345,3 mi</div><div class="sm">carteira de crédito</div><div class="ft"><strong>32</strong> operações de crédito</div></div>
+      <div class="spot spot--ring dcard"><div class="top">Pipeline e cenário base <span class="badge">PROJEÇÃO DA GESTORA</span></div><div class="big">R$ 890,7 mi</div><div class="sm">em 21 operações, sendo R$ 184,7 milhões em 8 operações prontas para investir</div><div class="ft" style="font-size:14px">Cenário base: dividend yield de <strong>14,91% ao ano</strong> sobre o preço de emissão no primeiro ano e <strong>CDI + 2,63%</strong> em cinco anos.</div></div>
+    </div>
+    <div class="grid g3 dcharts">
+      <div class="dchart"><div class="kicker">Carteira de crédito: hoje × após a oferta (R$ mi)</div><div class="chart-box"><canvas id="chGrow"></canvas></div></div>
+      <div class="dchart"><div class="kicker">Pipeline por estágio (R$ mi)</div><div class="chart-box"><canvas id="chPipe"></canvas></div></div>
+      <div class="dchart"><div class="kicker">Cenário base · DY sobre o preço de emissão × CDI estimado (% a.a.)</div><div class="chart-box"><canvas id="chProj"></canvas></div></div>
+    </div>
+    <p class="legal" style="margin:32px auto 0;max-width:900px">O pipeline não constitui compromisso de investimento. As informações são baseadas em simulações e os resultados reais poderão ser significativamente diferentes.</p>
+    <p class="legal" style="margin:8px auto 0;max-width:900px">Fonte: Éxes, Estudo de Viabilidade e mapa de originação de 17/09/2026. NÃO HÁ GARANTIA DE QUE O FUNDO INVESTIRÁ EM QUALQUER DAS OPERAÇÕES INDICADAS. Páginas 13, 24 a 26.</p>
+  </div>
+</section>
+
+<!-- 10. FICHA TÉCNICA -->
+<section class="section" id="ficha" style="padding-bottom:0">
+  <div class="wrap center">
+    <span class="eyebrow"><i></i>Ficha técnica</span>
+    <h2 class="h2" style="margin-top:16px">Ficha técnica <span>da oferta</span></h2>
+    <div class="rows rows--2" style="margin-top:48px">
+      <div class="row"><div class="n">01</div><div><div class="k">Ativo</div><div class="v">Éxes Fundo de Investimento Imobiliário Responsabilidade Limitada, EXES11</div></div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4BA7B3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
+      <div class="row"><div class="n">02</div><div><div class="k">Tipo de oferta</div><div class="v">6ª emissão, distribuição primária, rito automático da Resolução CVM 160</div></div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4BA7B3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
+      <div class="row"><div class="n">03</div><div><div class="k">Preço por cota</div><div class="v">R$ 9,91</div></div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4BA7B3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
+      <div class="row"><div class="n">04</div><div><div class="k">Volume base</div><div class="v">R$ 250.000.006,04 (25.227.044 cotas), com lote adicional de até 25%</div></div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4BA7B3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
+      <div class="row"><div class="n">05</div><div><div class="k">Montante mínimo</div><div class="v">R$ 10.000.002,62 (1.009.082 cotas)</div></div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4BA7B3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
+      <div class="row"><div class="n">06</div><div><div class="k">Investimento mínimo</div><div class="v">R$ 99,10 (10 cotas)</div></div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4BA7B3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
+      <div class="row"><div class="n">07</div><div><div class="k">Público alvo</div><div class="v">Investidores em geral</div></div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4BA7B3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
+      <div class="row"><div class="n">08</div><div><div class="k">Gestor</div><div class="v">Éxes Gestora de Recursos Ltda.</div></div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4BA7B3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
+      <div class="row"><div class="n">09</div><div><div class="k">Administrador</div><div class="v">BTG Pactual Serviços Financeiros S.A. DTVM</div></div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4BA7B3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
+      <div class="row"><div class="n">10</div><div><div class="k">Coordenador Líder</div><div class="v">Éxes Serviços Financeiros</div></div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4BA7B3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
+      <div class="row"><div class="n">11</div><div><div class="k">Assessor Legal</div><div class="v">CEPEDA Advogados</div></div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4BA7B3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
+    </div>
+    <p class="legal" style="margin-top:20px;text-align:left">Fonte: página 4 do material publicitário.</p>
+  </div>
+</section>
+
+<!-- 11. CRONOGRAMA -->
+<section class="section section--off" id="cronograma" style="margin-top:120px">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow"><i></i>Cronograma</span>
+      <h2 class="h2" style="margin-top:16px">Cronograma parcial <span>da oferta</span></h2>
+      <p class="sub" style="margin:14px auto 0;max-width:640px;font-size:14px">Cronograma parcial. As datas são indicativas e sujeitas a alterações, atrasos e antecipações. Cronograma validado e aprovado pela B3.</p>
+    </div>
+    <div class="tl">
+      <div class="tl__row"><div class="tl__txt"><b>01 · 09/10/26</b><span>Registro na CVM e Anúncio de Início</span></div><div class="tl__dot"></div></div>
+      <div class="tl__row"><div class="tl__txt"><b>02 · 15/10/26</b><span>Data de Corte</span></div><div class="tl__dot"></div></div>
+      <div class="tl__row now"><div class="tl__txt"><b>03 · 19 a 29/10/26</b><span>Direito de Preferência na B3</span></div><div class="tl__dot"></div></div>
+      <div class="tl__row"><div class="tl__txt"><b>04 · 30/10 e 03/11/26</b><span>Liquidação do Direito de Preferência</span></div><div class="tl__dot"></div></div>
+      <div class="tl__row"><div class="tl__txt"><b>05 · 04 a 18/11/26</b><span>Período de Subscrição</span></div><div class="tl__dot"></div></div>
+      <div class="tl__row"><div class="tl__txt"><b>06 · 19/11/26</b><span>Procedimento de Alocação</span></div><div class="tl__dot"></div></div>
+      <div class="tl__row"><div class="tl__txt"><b>07 · 25/11/26</b><span>Data de Liquidação</span></div><div class="tl__dot"></div></div>
+      <div class="tl__row"><div class="tl__txt"><b>08 · 01/02/27</b><span>Conversão dos recibos em cotas</span></div><div class="tl__dot"></div></div>
+    </div>
+    <p class="legal center" style="margin:48px auto 0;max-width:900px">Cronograma parcial. A Oferta prevê ainda um segundo período de subscrição, de 04/01/2027 a 20/01/2027, com procedimento de alocação em 21/01/2027, divulgação do resultado em 22/01/2027 e segunda data de liquidação em 26/01/2027; o cronograma completo consta do Estudo de Viabilidade e dos demais documentos da Oferta. As datas são indicativas e estão sujeitas a alterações, atrasos e antecipações; qualquer modificação será comunicada à CVM e aos investidores. Cronograma validado e aprovado pela B3.</p>
+    <div class="center"><a class="btn-shine" href="#cta" style="margin-top:32px"><span><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i>CLIQUE AQUI PARA [X]</span></a></div>
+  </div>
+</section>
+
+<!-- 12. FATORES DE RISCO + DOCUMENTOS -->
+<section class="section" id="riscos" style="padding-bottom:0">
+  <div class="wrap center">
+    <span class="eyebrow"><i></i>Leitura obrigatória</span>
+    <h2 class="h2" style="margin:16px auto 0">Fatores de risco e <span>documentos da oferta</span></h2>
+    <div class="faq">
+      <details open><summary>Fatores de risco (resumo obrigatório)<span>+</span></summary><p>Risco de crédito; fatores macroeconômicos; riscos do setor imobiliário; execução das garantias dos CRI; riscos tributários; diluição; não colocação do montante mínimo; caixa não investido; não concretização do pipeline; preço de emissão; entre outros descritos, em ordem decrescente de relevância, na seção "Fatores de Risco" do Prospecto. O investimento nas cotas representa um investimento de risco.</p></details>
+      <details><summary>Prospecto Definitivo<span>+</span></summary><p>Disponível nas páginas do Administrador, do Gestor (www.exes.com.br), do Coordenador Líder, da CVM e da B3. Link e passo a passo de acesso pendentes, conforme o Prospecto Definitivo.</p></details>
+      <details><summary>Lâmina<span>+</span></summary><p>Disponível nas páginas do Administrador, do Gestor (www.exes.com.br), do Coordenador Líder, da CVM e da B3. Link e passo a passo de acesso pendentes, conforme o Prospecto Definitivo.</p></details>
+      <details><summary>Regulamento<span>+</span></summary><p>Disponível nas páginas do Administrador, do Gestor (www.exes.com.br), do Coordenador Líder, da CVM e da B3. Link e passo a passo de acesso pendentes, conforme o Prospecto Definitivo.</p></details>
+      <details><summary>CVM<span>+</span></summary><p>Disponível nas páginas do Administrador, do Gestor (www.exes.com.br), do Coordenador Líder, da CVM e da B3. Link e passo a passo de acesso pendentes, conforme o Prospecto Definitivo.</p></details>
+      <details><summary>B3<span>+</span></summary><p>Disponível nas páginas do Administrador, do Gestor (www.exes.com.br), do Coordenador Líder, da CVM e da B3. Link e passo a passo de acesso pendentes, conforme o Prospecto Definitivo.</p></details>
+    </div>
+    <p style="margin:24px auto 0;font-size:12px;font-weight:600;line-height:1.55;text-transform:uppercase;max-width:900px">LEIA O PROSPECTO, A LÂMINA E O REGULAMENTO DO FUNDO ANTES DE ACEITAR A OFERTA, EM ESPECIAL A SEÇÃO "FATORES DE RISCO".</p>
+
+    <div class="cta" id="cta">
+      <h2>CLIQUE AQUI PARA [X]</h2>
+      <p style="margin:18px auto 0;max-width:620px;font-size:15px;line-height:1.6;color:rgba(255,255,255,.85)">Dúvidas: ri@exes.com.br</p>
+      <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:30px">
+        <a class="btn-shine btn-shine--light" href="#"><span><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i>CLIQUE AQUI PARA [X]</span></a>
+        <a class="btn btn--ghost-dark" href="mailto:ri@exes.com.br"><i><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></i>Fale com o RI</a>
+      </div>
+      <p style="margin:22px auto 0;font-size:12px;color:rgba(255,255,255,.8)">Destino a definir. Página destinada exclusivamente a assessores de investimento e profissionais da rede de distribuição.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 13. RODAPÉ -->
+<footer class="footer">
+  <div class="wrap" style="padding-top:80px">
+    <div class="footer__grid">
+      <div>
+        <img src="assets/logo-exes-white.png" alt="Éxes" style="height:36px;width:auto;display:block">
+        <p style="margin-top:18px;max-width:360px;font-size:14px;line-height:1.6;color:rgba(255,255,255,.8)">Éxes Gestora de Recursos Ltda., gestora do EXES11. Material publicitário da 6ª emissão de cotas.</p>
+        <span class="pill" style="margin-top:18px;background:transparent;border:1px solid rgba(75,167,179,.6);color:#fff;letter-spacing:0;text-transform:none"><i></i>Página exclusiva para assessores</span>
+      </div>
+      <div><div class="kicker">Contato</div><div style="margin-top:14px;display:flex;flex-direction:column;gap:10px;font-size:16px;font-weight:500"><a href="mailto:ri@exes.com.br">ri@exes.com.br</a><a href="https://www.exes.com.br" target="_blank" rel="noopener">www.exes.com.br</a></div></div>
+      <div><div class="kicker">Documentos</div><div style="margin-top:14px;display:flex;flex-direction:column;gap:10px;font-size:15px;font-weight:500"><a href="#riscos">Prospecto Definitivo</a><a href="#riscos">Lâmina</a><a href="#riscos">Regulamento</a><a href="#riscos">CVM</a><a href="#riscos">B3</a></div></div>
+    </div>
+    <div class="footer__legal">
+      <p>O Prospecto Definitivo, os anúncios e os comunicados da Oferta estão nas páginas do Administrador, do Gestor (www.exes.com.br), do Coordenador Líder, da CVM e da B3. Dúvidas: ri@exes.com.br.</p>
+      <p>Material publicitário elaborado pela Éxes Gestora de Recursos Ltda., gestora do EXES11, para a 6ª emissão, registrada automaticamente na CVM nos termos da Resolução CVM 160. Os documentos da Oferta não foram objeto de revisão pela CVM. Este material não substitui o Prospecto e não constitui recomendação de investimento.</p>
+      <p>A RENTABILIDADE PASSADA NÃO REPRESENTA GARANTIA DE RENTABILIDADE FUTURA. A EXPECTATIVA DE RENTABILIDADE PROJETADA NÃO REPRESENTA PROMESSA OU GARANTIA, E OS RESULTADOS REAIS PODERÃO SER SIGNIFICATIVAMENTE DIFERENTES. O FUNDO NÃO CONTA COM GARANTIA DA GESTORA, DO ADMINISTRADOR, DO COORDENADOR LÍDER, DE SEGURO OU DO FGC. Recomenda-se a leitura do Regulamento e do Prospecto, com atenção à seção de Fatores de Risco.</p>
+      <p>Página destinada exclusivamente a assessores de investimento e profissionais da rede de distribuição.</p>
+      <p style="margin-top:8px;color:rgba(255,255,255,.55)">© Éxes Gestora de Recursos 2026</p>
+    </div>
+    <img class="footer__mark" src="assets/logo-exes-white.png" alt="" aria-hidden="true">
+  </div>
+</footer>
+
+<script>
+/* ---------- Hero: vídeo de fundo avança um trecho conforme a rolagem ---------- */
+(function(){
+  var v=document.getElementById('heroVideo'), poster=document.getElementById('heroPoster'), hero=document.getElementById('hero');
+  var SPAN=0.42; /* fração do vídeo percorrida enquanto o hero sai da tela */
+  var ready=false, target=0, current=0;
+  function ok(){ if(isFinite(v.duration)&&v.duration>0){ ready=true; poster.style.display='none'; v.pause(); } }
+  v.addEventListener('loadedmetadata',ok);
+  var src=(v.querySelector('source')||{}).src||v.currentSrc;
+  if(src&&window.fetch){ fetch(src).then(function(r){ if(!r.ok) throw 0; return r.blob(); }).then(function(b){ v.src=URL.createObjectURL(b); v.load(); }).catch(function(){ if(v.readyState>=1) ok(); }); }
+  else if(v.readyState>=1) ok();
+  v.addEventListener('error',function(){ ready=false; poster.style.display='block'; });
+  function onScroll(){ var h=hero.offsetHeight||1; target=Math.min(1,Math.max(0,window.scrollY/h)); }
+  function tick(){
+    current+=(target-current)*0.12;
+    if(ready&&!v.seeking){ var t=current*SPAN*v.duration; if(Math.abs(v.currentTime-t)>0.015){ try{ v.currentTime=t; }catch(e){} } }
+    requestAnimationFrame(tick);
+  }
+  window.addEventListener('scroll',onScroll,{passive:true}); window.addEventListener('resize',onScroll); onScroll(); tick();
+})();
+
+/* ---------- Cronograma: datas aparecem conforme o scroll ---------- */
+(function(){
+  var tl=document.querySelector('.tl'); if(!tl) return;
+  var rows=[].slice.call(tl.querySelectorAll('.tl__row'));
+  function upd(){
+    var vh=window.innerHeight, r=tl.getBoundingClientRect(), line=vh*0.62;
+    var p=Math.min(1,Math.max(0,(line-r.top)/r.height));
+    tl.style.setProperty('--tlp',(p*100).toFixed(2)+'%');
+    rows.forEach(function(row){ var b=row.getBoundingClientRect(); row.classList.toggle('in',b.top+b.height/2<line); });
+  }
+  window.addEventListener('scroll',upd,{passive:true}); window.addEventListener('resize',upd); upd();
+})();
+
+
+/* ---------- Morphing navbar (21st.dev, portado) ---------- */
+(function(){
+  var nav=document.getElementById('msnNav'),prog=document.getElementById('msnProgress'),comp=document.querySelector('.compliance');
+  var links=[].slice.call(nav.querySelectorAll('.msn-links a')),lastY=window.scrollY,frame=0;
+  var av=document.getElementById('aviso');function offset(){var h=comp?comp.offsetHeight:0;var b=av?Math.max(h,av.getBoundingClientRect().bottom):h;nav.style.top=b+'px';prog.style.top=h+'px'}
+  function update(){
+    var y=window.scrollY,d=y-lastY;
+    nav.classList.toggle('is-floating',y>=8);
+    if(d>4)nav.classList.add('is-compact');else if(d<-4)nav.classList.remove('is-compact');
+    var doc=document.documentElement,max=doc.scrollHeight-doc.clientHeight;
+    prog.style.transform='scaleX('+(max>0?Math.min(1,Math.max(0,y/max)):0)+')';
+    var marker=y+window.innerHeight*0.34,next=links[0]?links[0].getAttribute('href'):'';
+    links.forEach(function(a){var sec=document.getElementById(a.getAttribute('href').slice(1));if(sec&&sec.offsetTop<=marker)next=a.getAttribute('href')});
+    links.forEach(function(a){if(a.getAttribute('href')===next)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current')});
+    offset();lastY=y;frame=0;
+  }
+  function onScroll(){if(!frame)frame=requestAnimationFrame(update)}
+  offset();update();
+  window.addEventListener('scroll',onScroll,{passive:true});window.addEventListener('resize',function(){offset();update()});
+})();
+
+/* ---------- Spotlight que segue o ponteiro ---------- */
+document.querySelectorAll('.spot').forEach(function(el){
+  el.addEventListener('pointermove',function(e){var r=el.getBoundingClientRect();el.style.setProperty('--mx',(e.clientX-r.left)+'px');el.style.setProperty('--my',(e.clientY-r.top)+'px')});
+});
+
+
+/* ---------- Liquid glass: reflexo acompanha o ponteiro ---------- */
+document.querySelectorAll('.hl>div,.float').forEach(function(el){
+  el.addEventListener('pointermove',function(e){var r=el.getBoundingClientRect();el.style.setProperty('--gx',((e.clientX-r.left)/r.width*100).toFixed(1)+'%');el.style.setProperty('--gy',((e.clientY-r.top)/r.height*100).toFixed(1)+'%')});
+  el.addEventListener('pointerleave',function(){el.style.removeProperty('--gx');el.style.removeProperty('--gy')});
+});
+
+
+/* ---------- Lenis (rolagem suave) ---------- */
+(function(){
+  if(typeof Lenis==='undefined'||window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var lenis=new Lenis({autoRaf:true,lerp:0.09,wheelMultiplier:1,smoothWheel:true,anchors:{offset:-110}});
+  window.lenis=lenis;
+})();
+
+
+/* ---------- Menu sanduíche ---------- */
+(function(){
+  var nav=document.getElementById('msnNav'), btn=nav.querySelector('.msn-burger'), menu=document.getElementById('msnMenu');
+  function set(open){
+    nav.classList.toggle('is-open',open); btn.setAttribute('aria-expanded',open?'true':'false');
+    btn.setAttribute('aria-label',open?'Fechar menu':'Abrir menu'); menu.setAttribute('aria-hidden',open?'false':'true');
+    if(window.lenis){ open?window.lenis.stop():window.lenis.start(); }
+  }
+  btn.addEventListener('click',function(){ set(!nav.classList.contains('is-open')); });
+  menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click',function(){ set(false); }); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') set(false); });
+  document.addEventListener('click',function(e){ if(nav.classList.contains('is-open')&&!nav.contains(e.target)) set(false); });
+  window.addEventListener('resize',function(){ if(window.innerWidth>1024) set(false); });
+})();
+
+/* ---------- Tabs (pílula deslizante + troca animada) ---------- */
+(function(){
+  var tabs=document.querySelector('.tabs'); if(!tabs) return;
+  var pill=tabs.querySelector('.tabs__pill'), btns=[].slice.call(tabs.querySelectorAll('button'));
+  function place(b,instant){
+    if(instant){pill.style.transition='none'}
+    pill.style.width=b.offsetWidth+'px'; pill.style.transform='translateX('+b.offsetLeft+'px)';
+    if(instant){pill.offsetWidth; pill.style.transition=''}
+  }
+  btns.forEach(function(b){
+    b.setAttribute('role','tab');
+    b.addEventListener('click',function(){
+      if(b.classList.contains('on')) return;
+      btns.forEach(function(x){x.classList.remove('on');x.setAttribute('aria-selected','false')});
+      document.querySelectorAll('.tabpanel').forEach(function(x){x.classList.remove('on')});
+      b.classList.add('on'); b.setAttribute('aria-selected','true');
+      var panel=document.getElementById('tab-'+b.dataset.tab); void panel.offsetWidth; panel.classList.add('on');
+      place(b);
+    });
+  });
+  var cur=tabs.querySelector('button.on')||btns[0];
+  place(cur,true);
+  window.addEventListener('resize',function(){place(tabs.querySelector('button.on')||btns[0],true)});
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(function(){place(tabs.querySelector('button.on')||btns[0],true)});
+})();
+
+/* ---------- Carrossel ---------- */
+(function(){
+  var car=document.getElementById('car');
+  document.querySelectorAll('[data-car]').forEach(function(b){
+    b.addEventListener('click',function(){ var w=car.querySelector('.ccard').getBoundingClientRect().width+16; car.scrollBy({left:w*Number(b.dataset.car),behavior:'smooth'}); });
+  });
+})();
+
+/* ---------- Gráficos (Chart.js) ---------- */
+(function(){
+  var AQUA='#4BA7B3',NAVY='#1B2B4B',RES='#374D62',NEU='#AEAFB2',GOLD='#C9A24B',GRA='#595959';
+  Chart.defaults.font.family='Montserrat, sans-serif'; Chart.defaults.font.size=11; Chart.defaults.color=GRA;
+  Chart.defaults.plugins.legend.labels.boxWidth=10; Chart.defaults.plugins.legend.labels.usePointStyle=true;
+  Chart.defaults.plugins.tooltip.backgroundColor=NAVY; Chart.defaults.plugins.tooltip.titleFont={weight:'600'};
+  var pct=function(d){return function(c){return (c.dataset.label?c.dataset.label+': ':'')+Number(c.parsed.y!==undefined&&c.parsed.y!==null?c.parsed.y:c.parsed).toLocaleString('pt-BR',{minimumFractionDigits:d,maximumFractionDigits:d})+'%'}};
+  var brl=function(d){return function(c){return (c.dataset.label?c.dataset.label+': ':'')+'R$ '+Number(c.parsed.y).toLocaleString('pt-BR',{minimumFractionDigits:d,maximumFractionDigits:d})}};
+  var grid={color:'rgba(174,175,178,.25)'}, gridDark={color:'rgba(255,255,255,.12)'};
+  var light={legend:{labels:{color:'rgba(255,255,255,.85)'}}};
+
+  /* Pilares */
+  var meses20=['jan/25','fev/25','mar/25','abr/25','mai/25','jun/25','jul/25','ago/25','set/25','out/25','nov/25','dez/25','jan/26','fev/26','mar/26','abr/26','mai/26','jun/26','jul/26','ago/26'];
+  new Chart('chPilar1',{type:'bar',data:{labels:meses20,datasets:[{label:'Distribuição por cota',data:meses20.map(function(){return 0.13}),backgroundColor:GOLD,borderRadius:3}]},
+    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return 'R$ '+c.parsed.y.toFixed(2).replace('.',',')+' por cota'}}}},scales:{x:{display:false},y:{display:false,min:0,max:0.16}}}});
+  new Chart('chPilar2',{type:'bar',data:{labels:['EXES11','CDI'],datasets:[{data:[17.13,14.63],backgroundColor:[GOLD,'rgba(255,255,255,.35)'],borderRadius:4}]},
+    options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return c.parsed.x.toFixed(2).replace('.',',')+'% em 12 meses'}}}},scales:{x:{display:false,min:0,max:20},y:{ticks:{color:'rgba(255,255,255,.85)',font:{weight:'600'}},grid:{display:false}}}}});
+  new Chart('chPilar3',{type:'doughnut',data:{labels:['LTV médio','Folga até 100%'],datasets:[{data:[52.18,47.82],backgroundColor:[GOLD,'rgba(255,255,255,.15)'],borderWidth:0}]},
+    options:{responsive:true,maintainAspectRatio:false,cutout:'72%',rotation:-90,circumference:180,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return c.label+': '+c.parsed.toFixed(2).replace('.',',')+'%'}}}}},
+    plugins:[{id:'txt',afterDraw:function(ch){var x=ch.chartArea.left+ch.chartArea.width/2,y=ch.chartArea.bottom-6;var g=ch.ctx;g.save();g.textAlign='center';g.fillStyle='#fff';g.font='600 18px Montserrat';g.fillText('52,18%',x,y);g.fillStyle='rgba(255,255,255,.7)';g.font='10px Montserrat';g.fillText('teto 70%',x,y+14);g.restore()}}]});
+  new Chart('chPilar4',{type:'doughnut',data:{labels:['Originação própria','Terceiros'],datasets:[{data:[72,28],backgroundColor:[GOLD,'rgba(255,255,255,.15)'],borderWidth:0}]},
+    options:{responsive:true,maintainAspectRatio:false,cutout:'72%',plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return c.label+': '+c.parsed+'%'}}}}},
+    plugins:[{id:'txt2',afterDraw:function(ch){var x=ch.chartArea.left+ch.chartArea.width/2,y=ch.chartArea.top+ch.chartArea.height/2;var g=ch.ctx;g.save();g.textAlign='center';g.fillStyle='#fff';g.font='600 18px Montserrat';g.fillText('72%',x,y+6);g.restore()}}]});
+
+  /* Retorno desde jun/22 */
+  var lab=["06/22","07/22","08/22","09/22","10/22","11/22","12/22","01/23","02/23","03/23","04/23","05/23","06/23","07/23","08/23","09/23","10/23","11/23","12/23","01/24","02/24","03/24","04/24","05/24","06/24","07/24","08/24","09/24","10/24","11/24","12/24","01/25","02/25","03/25","04/25","05/25","06/25","07/25","08/25","09/25","10/25","11/25","12/25","01/26","02/26","03/26","04/26","05/26","06/26","07/26","08/26"];
+  var exes=[100,100.41,100.91,102.56,102.55,103.7,103.21,104.64,104.84,105.13,106.66,104.27,103.05,101.24,101.61,102.15,102.67,103.33,103.88,104.49,106.39,106.82,106.97,107.73,110.14,110.18,112.77,113.64,114.21,115.63,116.04,124.29,128.5,129.89,131.26,133.48,135.09,136.58,137.67,139.58,141.74,145.19,146.88,150.01,152.79,156.09,157.67,157.35,158.32,159.62,160.77];
+  var ifix=[100,100.66,106.46,106.98,107,102.56,102.56,100.91,100.46,98.76,102.24,107.79,112.87,114.36,114.92,115.15,112.88,113.63,118.45,119.24,120.19,121.91,120.97,120.99,119.73,120.36,121.39,118.25,114.64,112.22,111.47,108.05,111.66,118.51,122.07,123.83,124.61,122.92,124.35,128.4,128.54,130.93,135.04,138.11,139.93,138.45,140.57,138.7,137.02,136.58,134.59];
+  var ipca=[100,99.32,98.96,98.67,99.26,99.67,100.28,100.81,101.66,102.38,103.01,103.24,103.16,103.28,103.52,103.79,104.04,104.33,104.92,105.36,106.23,106.4,106.81,107.3,107.52,107.93,107.91,108.39,108.99,109.42,109.99,110.16,111.61,112.23,112.71,113,113.28,113.57,113.45,113.99,114.09,114.3,114.68,115.05,115.86,116.88,117.66,118.34,118.53,118.62,118.24];
+  new Chart('chRet',{type:'line',data:{labels:lab,datasets:[
+      {label:'EXES11 +60,8%',data:exes,borderColor:AQUA,backgroundColor:'rgba(75,167,179,.12)',fill:true,borderWidth:2.2,pointRadius:0,tension:.25},
+      {label:'IFIX +34,6%',data:ifix,borderColor:RES,borderWidth:1.6,pointRadius:0,tension:.25},
+      {label:'IPCA +18,2%',data:ipca,borderColor:NEU,borderWidth:1.6,pointRadius:0,tension:.25}]},
+    options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{tooltip:{callbacks:{label:function(c){return c.dataset.label.split(' ')[0]+': '+(c.parsed.y-100).toFixed(1).replace('.',',')+'% (base 100)'}}}},
+      scales:{x:{ticks:{maxTicksLimit:6},grid:{display:false}},y:{grid:grid,ticks:{callback:function(v){return v}}}}}});
+
+  /* 12 meses */
+  new Chart('ch12m',{type:'bar',data:{labels:['EXES11','CDI','IFIX','IPCA'],datasets:[{label:'12 meses',data:[17.13,14.63,8.23,4.22],backgroundColor:[AQUA,RES,NEU,'#D9DADC'],borderRadius:6}]},
+    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:pct(2)}}},scales:{x:{grid:{display:false},ticks:{font:{weight:'600'}}},y:{grid:grid,ticks:{callback:function(v){return v+'%'}}}}}});
+
+  /* DY mensal 12m */
+  var m12=['set/25','out/25','nov/25','dez/25','jan/26','fev/26','mar/26','abr/26','mai/26','jun/26','jul/26','ago/26'];
+  new Chart('chDY',{type:'bar',data:{labels:m12,datasets:[
+      {label:'Isento',data:[1.34,1.33,1.33,1.32,1.31,1.3,1.31,1.31,1.33,1.34,1.34,1.35],backgroundColor:AQUA,borderRadius:3},
+      {label:'Bruto equivalente',data:[1.58,1.56,1.57,1.55,1.55,1.53,1.54,1.54,1.56,1.57,1.58,1.59],backgroundColor:'rgba(55,77,98,.35)',borderRadius:3}]},
+    options:{responsive:true,maintainAspectRatio:false,plugins:{tooltip:{callbacks:{label:pct(2)}}},scales:{x:{grid:{display:false},ticks:{maxTicksLimit:6}},y:{min:1,max:1.7,grid:grid,ticks:{callback:function(v){return v.toFixed(1).replace('.',',')+'%'}}}}}});
+
+  /* Ranking mensal */
+  var rm=['jun/25','jul/25','ago/25','set/25','out/25','nov/25','dez/25','jan/26','fev/26','mar/26','abr/26','mai/26','jun/26','jul/26','ago/26'];
+  new Chart('chRank',{type:'line',data:{labels:rm,datasets:[{label:'Posição',data:[5,4,7,4,4,5,4,5,5,3,2,3,2,2,1],borderColor:AQUA,backgroundColor:AQUA,borderWidth:2.2,pointRadius:4,pointBackgroundColor:'#fff',pointBorderWidth:2,tension:.3}]},
+    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return c.parsed.y+'º lugar'}}}},
+      scales:{x:{grid:{display:false},ticks:{maxTicksLimit:6}},y:{reverse:true,min:1,max:10,grid:grid,ticks:{stepSize:1,callback:function(v){return v+'º'}}}}}});
+
+  /* Carteira */
+  new Chart('chComp',{type:'doughnut',data:{labels:['Crédito imobiliário','FIAGRO (AGRX11)','Caixa'],datasets:[{data:[76.84,21.7,1.46],backgroundColor:[AQUA,RES,NEU],borderWidth:2,borderColor:'#fff'}]},
+    options:{responsive:true,maintainAspectRatio:false,cutout:'65%',plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:function(c){return c.label+': '+c.parsed.toFixed(2).replace('.',',')+'%'}}}}}});
+  new Chart('chUF',{type:'bar',data:{labels:['SP','MG','BA','GO','MT','A definir','ES'],datasets:[{data:[34.89,20.56,14.91,14.11,7.52,5.27,2.74],backgroundColor:[AQUA,AQUA,AQUA,AQUA,AQUA,NEU,AQUA],borderRadius:4}]},
+    options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return c.parsed.x.toFixed(2).replace('.',',')+'% da carteira de crédito'}}}},scales:{x:{grid:grid,ticks:{callback:function(v){return v+'%'}}},y:{grid:{display:false}}}}});
+  new Chart('chSet',{type:'bar',data:{labels:[['Incorporação','residencial'],'Educacional',['Lajes','comerciais'],['Varejo','essencial'],['Residencial','pulverizado'],'Energia',['Venda de','terreno'],'Loteamento'],datasets:[{data:[44.9,5.8,5.3,5.2,5.2,4.8,4.7,1.0],backgroundColor:AQUA,borderRadius:4}]},
+    options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return c.parsed.x.toFixed(1).replace('.',',')+'% do PL'}}}},scales:{x:{grid:grid,ticks:{callback:function(v){return v+'%'}}},y:{grid:{display:false},ticks:{autoSkip:false,font:{size:10},lineHeight:1.1}}}}});
+  var ops=['Acoi','Duarte e Lima','Mont Blanc','Persa Spot','NMC','Maxi','São Carlos','São Vicente','FGR','Celeste','Persa Piatra','EBM (Cyrela)','Raposo (Volpe)','CRI NP38','IC Construtora','Ávida','Totus','Congesa'];
+  var conc=[6.29,5.76,5.71,5.7,5.63,5.41,5.31,5.25,5.23,4.84,4.7,4.68,4.45,4.06,2.11,0.95,0.82,0.05];
+  new Chart('chConc',{type:'bar',data:{labels:ops,datasets:[{label:'% do PL',data:conc,backgroundColor:AQUA,borderRadius:3},{label:'Limite 10%',data:ops.map(function(){return 10}),type:'line',borderColor:GOLD,borderDash:[5,4],borderWidth:1.5,pointRadius:0}]},
+    options:{responsive:true,maintainAspectRatio:false,plugins:{tooltip:{callbacks:{label:pct(2)}}},scales:{x:{grid:{display:false},ticks:{autoSkip:false,maxRotation:60,minRotation:45,font:{size:9}}},y:{min:0,max:11,grid:grid,ticks:{callback:function(v){return v+'%'}}}}}});
+  var lops=['Persa Piatra','Acoi','Persa Spot','CRI NP38','Maxi','Totus','Raposo (Volpe)','Mont Blanc','IC Construtora','São Vicente','Celeste','NMC','Duarte e Lima','FGR','Congesa','Ávida'];
+  var ltv=[64.8,61.77,61.2,60.98,60.78,58.66,57.84,56.67,55.06,52.47,43.4,40.52,37.34,37.32,7.87,6.33];
+  new Chart('chLTV',{type:'bar',data:{labels:lops,datasets:[{label:'LTV',data:ltv,backgroundColor:RES,borderRadius:3},{label:'Teto 70%',data:lops.map(function(){return 70}),type:'line',borderColor:GOLD,borderDash:[5,4],borderWidth:1.5,pointRadius:0},{label:'Média 52,18%',data:lops.map(function(){return 52.18}),type:'line',borderColor:AQUA,borderWidth:1.5,pointRadius:0}]},
+    options:{responsive:true,maintainAspectRatio:false,plugins:{tooltip:{callbacks:{label:pct(2)}}},scales:{x:{grid:{display:false},ticks:{autoSkip:false,maxRotation:60,minRotation:45,font:{size:9}}},y:{min:0,max:80,grid:grid,ticks:{callback:function(v){return v+'%'}}}}}});
+
+  /* Destino */
+  new Chart('chGrow',{type:'bar',data:{labels:['Hoje (31/08/26)','Após a oferta'],datasets:[{data:[104.4,345.3],backgroundColor:['rgba(255,255,255,.35)',AQUA],borderRadius:6}]},
+    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return 'R$ '+c.parsed.y.toFixed(1).replace('.',',')+' mi'}}}},scales:{x:{grid:{display:false},ticks:{color:'rgba(255,255,255,.85)'}},y:{grid:gridDark,ticks:{color:'rgba(255,255,255,.7)'}}}}});
+  new Chart('chPipe',{type:'bar',data:{labels:[['Pronto para','investir'],['Em','estruturação'],['Em negociação','avançada']],datasets:[{data:[184.7,325,381],backgroundColor:[AQUA,'rgba(75,167,179,.55)','rgba(255,255,255,.3)'],borderRadius:6}]},
+    options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return 'R$ '+c.parsed.x.toFixed(1).replace('.',',')+' mi'}}}},scales:{x:{grid:gridDark,ticks:{color:'rgba(255,255,255,.7)'}},y:{grid:{display:false},ticks:{color:'rgba(255,255,255,.85)',font:{size:10}}}}}});
+  new Chart('chProj',{type:'bar',data:{labels:['1º ano','2º ano','3º ano','4º ano','5º ano'],datasets:[
+      {label:'DY sobre o preço de emissão',data:[14.91,14.6,13.94,13.76,13.78],backgroundColor:AQUA,borderRadius:5},
+      {label:'CDI estimado',data:[13.14,11.46,10.25,9.9,9.9],type:'line',borderColor:GOLD,backgroundColor:GOLD,borderWidth:2,pointRadius:3,tension:.3}]},
+    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{color:'rgba(255,255,255,.85)'}},tooltip:{callbacks:{label:pct(2)}}},scales:{x:{grid:{display:false},ticks:{color:'rgba(255,255,255,.85)'}},y:{min:0,grid:gridDark,ticks:{color:'rgba(255,255,255,.7)',callback:function(v){return v+'%'}}}}}});
+})();
+</script>
+</body>
+</html>
