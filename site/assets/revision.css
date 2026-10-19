@@ -33,15 +33,15 @@
 .comparison--current h4{font-size:36px}
 .comparison--current dl>div{border-color:rgba(255,255,255,.2)}
 .comparison__note{font-size:12px;line-height:1.7;margin-top:24px;color:#c3e6ea}
-#tese .grid{align-items:start}
-.distribution{margin:22px 0 0;text-align:left}
-.distribution__value{font-size:36px;line-height:1.1;font-weight:600;color:#e2bc65;letter-spacing:-.03em}
-.distribution__value span{display:block;font-size:12px;line-height:1.5;font-weight:400;letter-spacing:0;color:#fff;margin-top:7px}
-.distribution__calendar{display:grid;gap:16px;margin-top:22px}
-.distribution__year h4{margin:0 0 8px;font-size:12px;line-height:1.5;font-weight:600;letter-spacing:.06em;color:#fff}
-.distribution__months{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;padding:0;margin:0}
-.distribution__months li{display:grid;place-items:center;min-height:32px;padding:6px 2px;border:1px solid #e2bc65;border-radius:5px;background:#e2bc65;color:#1b2b4b;font-size:12px;line-height:1.4;font-weight:600}
-.distribution figcaption{font-size:11px;line-height:1.6;margin-top:14px;color:rgba(255,255,255,.8)}
+#tese .grid{align-items:stretch;grid-auto-rows:1fr}
+.distribution{margin:12px 0 0;text-align:left}
+.distribution__value{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 8px;font-size:26px;line-height:1.2;font-weight:600;color:#e2bc65;letter-spacing:-.03em}
+.distribution__value span{font-size:11px;line-height:1.5;font-weight:400;letter-spacing:0;color:#fff}
+.distribution__calendar{display:grid;gap:10px;margin-top:12px}
+.distribution__year h4{margin:0 0 4px;font-size:12px;line-height:1.3;font-weight:600;letter-spacing:.04em;color:#fff}
+.distribution__months{list-style:none;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:4px;padding:0;margin:0}
+.distribution__months li{display:grid;place-items:center;min-height:22px;padding:2px 0;border:1px solid #e2bc65;border-radius:4px;background:#e2bc65;color:#1b2b4b;font-size:12px;line-height:1.4;font-weight:600}
+.distribution figcaption{font-size:11px;line-height:1.5;margin-top:10px;color:rgba(255,255,255,.85)}
 .emp-head{flex-direction:column;align-items:center;text-align:center;gap:18px}
 .emp-head .sub{max-width:660px!important}
 #dados>.wrap.center{padding-inline:24px}
