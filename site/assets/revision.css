@@ -181,8 +181,8 @@ html.lead-modal-open,html.lead-modal-open body{overflow:hidden}
 #tese .glass .g{color:#fff}
 
 /* Faixa institucional compacta, com acabamento na paleta do fundo. */
-.logos{background:#fff;border:0;padding:14px 20px 20px}
-.logos__grid{position:relative;isolation:isolate;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;max-width:1140px;padding:18px 12px;margin:0 auto;border:1px solid #3b5369;border-radius:16px;background:radial-gradient(ellipse at 15% 0,rgba(75,167,179,.16),transparent 55%),linear-gradient(115deg,#21374f,#1b2b4b 75%);box-shadow:0 8px 20px rgba(27,43,75,.08)}
+.logos{isolation:isolate;background:radial-gradient(ellipse at 15% 0,rgba(75,167,179,.16),transparent 55%),linear-gradient(115deg,#21374f,#1b2b4b 75%);border-top:1px solid #3b5369;border-bottom:1px solid rgba(255,255,255,.1);padding:0}
+.logos__grid{position:relative;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;max-width:1140px;padding:18px 12px;margin:0 auto;border:0;border-radius:0;background:transparent;box-shadow:none}
 .logos__grid::before{content:"";position:absolute;top:-1px;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,rgba(105,197,204,.8),transparent);pointer-events:none}
 .logo{min-width:0;padding:0 16px}
 .logo+.logo{border-left:1px solid rgba(255,255,255,.12)}
@@ -197,8 +197,8 @@ html.lead-modal-open,html.lead-modal-open body{overflow:hidden}
  .logo .kicker{font-size:8px;letter-spacing:.04em;gap:4px}
 }
 @media(max-width:700px){
- .logos{padding:10px 20px 16px}
- .logos__grid{grid-template-columns:repeat(2,minmax(0,1fr));padding:16px 12px;row-gap:14px;border-radius:14px}
+ .logos{padding:0 20px}
+ .logos__grid{grid-template-columns:repeat(2,minmax(0,1fr));padding:16px 12px;row-gap:14px;border-radius:0}
  .logo{padding:0 10px}
  .logo+.logo{border-left:0}
  .logo:nth-child(even){border-left:1px solid rgba(255,255,255,.12)}
