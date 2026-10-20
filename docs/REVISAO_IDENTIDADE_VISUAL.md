@@ -12,3 +12,10 @@
 - Logo carregado e legível em desktop e celular.
 - Gráficos sem amarelo, com referências em cinza para preservar contraste; sem erros de console.
 - Sintaxe do JavaScript e `git diff --check` aprovados.
+
+## Ajuste da faixa institucional
+
+- Removidos os fundos individuais dos blocos e equilibrados tamanhos, espaços e separadores das marcas.
+- Marca original da Coordenadora apresentada em branco sobre o fundo azul por filtro CSS e composição `screen`, sem redesenhar a imagem.
+- Grade de cinco colunas no desktop e duas no celular, com selos em linha própria.
+- Conferência visual em 1280 e 390 px, sem rolagem horizontal.

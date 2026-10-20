@@ -178,6 +178,33 @@ html.lead-modal-open,html.lead-modal-open body{overflow:hidden}
 .sheet-metric dd.sheet-metric__detail{font-size:11px;font-weight:400;line-height:1.7;letter-spacing:0;margin:0;white-space:normal}
 
 /* Identidade visual: marca oficial da coordenadora e paleta do fundo. */
-.logo .box.box--coordinator{background:#f7f7f7;border-color:#f7f7f7}
-.logo .box--coordinator img{width:100%;height:auto;max-height:100%;object-fit:contain}
 #tese .glass .g{color:#fff}
+
+/* Faixa institucional: marcas alinhadas sobre um único fundo. */
+.logos{border-bottom:1px solid rgba(255,255,255,.1)}
+.logos__grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:0;padding:36px 20px}
+.logo{min-width:0;padding:4px 20px}
+.logo+.logo{border-left:1px solid rgba(255,255,255,.15)}
+.logo .kicker{font-size:10px;line-height:1.5;letter-spacing:.12em;color:rgba(255,255,255,.72);white-space:nowrap}
+.logo .box{height:64px;margin-top:14px;padding:6px 0;background:transparent;border:0;border-radius:0;gap:8px}
+.logo .box img{width:auto;height:auto;max-width:100%;max-height:42px}
+.logo .box--coordinator img{width:148px;max-height:48px;filter:grayscale(1) contrast(10) invert(1);mix-blend-mode:screen}
+.logo .box.seals img{width:calc((100% - 8px)/2);height:auto;max-height:44px;border-radius:3px}
+@media(max-width:1000px){
+  .logos__grid{padding:28px 16px}
+  .logo{padding:4px 12px}
+  .logo .kicker{font-size:9px;letter-spacing:.08em}
+}
+@media(max-width:700px){
+  .logos__grid{grid-template-columns:repeat(2,minmax(0,1fr));padding:24px 20px;row-gap:24px}
+  .logo{padding:0 14px}
+  .logo+.logo{border-left:0}
+  .logo:nth-child(even){border-left:1px solid rgba(255,255,255,.15)}
+  .logo .kicker{font-size:9px}
+  .logo .box{height:52px;margin-top:10px}
+  .logo .box img{max-height:36px}
+  .logo .box--coordinator img{max-height:46px}
+  .logo:last-child{grid-column:1/-1;padding-top:20px;border-top:1px solid rgba(255,255,255,.15)}
+  .logo .box.seals{height:44px;gap:12px}
+  .logo .box.seals img{width:auto;height:38px;max-height:38px;max-width:42%}
+}
