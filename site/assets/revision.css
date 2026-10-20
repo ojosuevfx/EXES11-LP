@@ -182,7 +182,7 @@ html.lead-modal-open,html.lead-modal-open body{overflow:hidden}
 
 /* Faixa institucional compacta, com acabamento na paleta do fundo. */
 .logos{isolation:isolate;background:radial-gradient(ellipse at 15% 0,rgba(75,167,179,.16),transparent 55%),linear-gradient(115deg,#21374f,#1b2b4b 75%);border-top:1px solid #3b5369;border-bottom:1px solid rgba(255,255,255,.1);padding:0}
-.logos__grid{position:relative;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;max-width:1140px;padding:18px 12px;margin:0 auto;border:0;border-radius:0;background:transparent;box-shadow:none}
+.logos__grid{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr)) minmax(0,1.65fr);gap:0;max-width:1140px;padding:18px 12px;margin:0 auto;border:0;border-radius:0;background:transparent;box-shadow:none}
 .logos__grid::before{content:"";position:absolute;top:-1px;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,rgba(105,197,204,.8),transparent);pointer-events:none}
 .logo{min-width:0;padding:0 16px}
 .logo+.logo{border-left:1px solid rgba(255,255,255,.12)}
@@ -191,7 +191,7 @@ html.lead-modal-open,html.lead-modal-open body{overflow:hidden}
 .logo .box{height:38px;margin-top:8px;padding:0;background:transparent;border:0;border-radius:0;gap:8px}
 .logo .box img{width:auto;height:auto;max-width:100%;max-height:28px}
 .logo .box--coordinator img{width:110px;max-height:35px;filter:grayscale(1) contrast(10) invert(1);mix-blend-mode:screen}
-.logo .box.seals img{width:auto;height:28px;max-width:calc((100% - 8px)/2);max-height:28px;border-radius:2px}
+.logo .box.seals img{width:auto;height:32px;max-width:calc((100% - 24px)/4);max-height:32px;border-radius:2px}
 @media(max-width:1000px){
  .logo{padding:0 10px}
  .logo .kicker{font-size:8px;letter-spacing:.04em;gap:4px}
@@ -206,7 +206,12 @@ html.lead-modal-open,html.lead-modal-open body{overflow:hidden}
  .logo .box{height:32px;margin-top:6px}
  .logo .box img{max-height:25px}
  .logo .box--coordinator img{width:100px;max-height:32px}
- .logo:last-child{grid-column:1/-1;padding:12px 8px 0;border-top:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;gap:18px}
- .logo .box.seals{height:28px;margin:0;gap:8px}
- .logo .box.seals img{width:auto;height:28px;max-height:28px;max-width:none}
+ .logo:last-child{grid-column:1/-1;padding:12px 8px 0;border-top:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;gap:10px;flex-direction:column}
+ .logo .box.seals{height:34px;margin:0;gap:8px;width:100%}
+ .logo .box.seals img{width:auto;height:34px;max-height:34px;max-width:calc((100% - 24px)/4)}
 }
+
+/* Documentos encaminham à página oficial da oferta. */
+.document-link{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 24px;border:1px solid var(--line);border-radius:16px;color:var(--navy);background:#fff;font-size:17px;font-weight:600;transition:border-color .2s,background .2s}
+.document-link:hover{border-color:var(--aqua);background:#f3f9fa}
+.document-link>span:last-child{color:#28747e;font-size:23px}
