@@ -19,3 +19,9 @@
 - Marca original da Coordenadora apresentada em branco sobre o fundo azul por filtro CSS e composição `screen`, sem redesenhar a imagem.
 - Grade de cinco colunas no desktop e duas no celular, com selos em linha própria.
 - Conferência visual em 1280 e 390 px, sem rolagem horizontal.
+
+## Refinamento compacto da faixa
+
+- Reduzidos logos, espaçamentos e altura; painel delimitado com cantos suaves, borda e degradê discreto azul/aqua.
+- Selos alinhados em uma linha compacta no celular.
+- Validado em 1280 e 390 px sem rolagem lateral; seção com 131,5 e 229 px de altura, respectivamente.

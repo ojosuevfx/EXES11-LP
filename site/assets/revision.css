@@ -180,31 +180,33 @@ html.lead-modal-open,html.lead-modal-open body{overflow:hidden}
 /* Identidade visual: marca oficial da coordenadora e paleta do fundo. */
 #tese .glass .g{color:#fff}
 
-/* Faixa institucional: marcas alinhadas sobre um único fundo. */
-.logos{border-bottom:1px solid rgba(255,255,255,.1)}
-.logos__grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:0;padding:36px 20px}
-.logo{min-width:0;padding:4px 20px}
-.logo+.logo{border-left:1px solid rgba(255,255,255,.15)}
-.logo .kicker{font-size:10px;line-height:1.5;letter-spacing:.12em;color:rgba(255,255,255,.72);white-space:nowrap}
-.logo .box{height:64px;margin-top:14px;padding:6px 0;background:transparent;border:0;border-radius:0;gap:8px}
-.logo .box img{width:auto;height:auto;max-width:100%;max-height:42px}
-.logo .box--coordinator img{width:148px;max-height:48px;filter:grayscale(1) contrast(10) invert(1);mix-blend-mode:screen}
-.logo .box.seals img{width:calc((100% - 8px)/2);height:auto;max-height:44px;border-radius:3px}
+/* Faixa institucional compacta, com acabamento na paleta do fundo. */
+.logos{background:#fff;border:0;padding:14px 20px 20px}
+.logos__grid{position:relative;isolation:isolate;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;max-width:1140px;padding:18px 12px;margin:0 auto;border:1px solid #3b5369;border-radius:16px;background:radial-gradient(ellipse at 15% 0,rgba(75,167,179,.16),transparent 55%),linear-gradient(115deg,#21374f,#1b2b4b 75%);box-shadow:0 8px 20px rgba(27,43,75,.08)}
+.logos__grid::before{content:"";position:absolute;top:-1px;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,rgba(105,197,204,.8),transparent);pointer-events:none}
+.logo{min-width:0;padding:0 16px}
+.logo+.logo{border-left:1px solid rgba(255,255,255,.12)}
+.logo .kicker{display:flex;justify-content:center;align-items:center;gap:6px;font-size:9px;line-height:1.5;letter-spacing:.08em;color:#c5d4df;white-space:nowrap}
+.logo .kicker::before{content:"";width:3px;height:3px;flex:none;border-radius:50%;background:var(--aqua)}
+.logo .box{height:38px;margin-top:8px;padding:0;background:transparent;border:0;border-radius:0;gap:8px}
+.logo .box img{width:auto;height:auto;max-width:100%;max-height:28px}
+.logo .box--coordinator img{width:110px;max-height:35px;filter:grayscale(1) contrast(10) invert(1);mix-blend-mode:screen}
+.logo .box.seals img{width:auto;height:28px;max-width:calc((100% - 8px)/2);max-height:28px;border-radius:2px}
 @media(max-width:1000px){
-  .logos__grid{padding:28px 16px}
-  .logo{padding:4px 12px}
-  .logo .kicker{font-size:9px;letter-spacing:.08em}
+ .logo{padding:0 10px}
+ .logo .kicker{font-size:8px;letter-spacing:.04em;gap:4px}
 }
 @media(max-width:700px){
-  .logos__grid{grid-template-columns:repeat(2,minmax(0,1fr));padding:24px 20px;row-gap:24px}
-  .logo{padding:0 14px}
-  .logo+.logo{border-left:0}
-  .logo:nth-child(even){border-left:1px solid rgba(255,255,255,.15)}
-  .logo .kicker{font-size:9px}
-  .logo .box{height:52px;margin-top:10px}
-  .logo .box img{max-height:36px}
-  .logo .box--coordinator img{max-height:46px}
-  .logo:last-child{grid-column:1/-1;padding-top:20px;border-top:1px solid rgba(255,255,255,.15)}
-  .logo .box.seals{height:44px;gap:12px}
-  .logo .box.seals img{width:auto;height:38px;max-height:38px;max-width:42%}
+ .logos{padding:10px 20px 16px}
+ .logos__grid{grid-template-columns:repeat(2,minmax(0,1fr));padding:16px 12px;row-gap:14px;border-radius:14px}
+ .logo{padding:0 10px}
+ .logo+.logo{border-left:0}
+ .logo:nth-child(even){border-left:1px solid rgba(255,255,255,.12)}
+ .logo .kicker{font-size:8px}
+ .logo .box{height:32px;margin-top:6px}
+ .logo .box img{max-height:25px}
+ .logo .box--coordinator img{width:100px;max-height:32px}
+ .logo:last-child{grid-column:1/-1;padding:12px 8px 0;border-top:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;gap:18px}
+ .logo .box.seals{height:28px;margin:0;gap:8px}
+ .logo .box.seals img{width:auto;height:28px;max-height:28px;max-width:none}
 }
