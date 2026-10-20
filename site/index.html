@@ -11,7 +11,7 @@
 <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <style>
-:root{--aqua:#4BA7B3;--navy:#1B2B4B;--res:#374D62;--gra:#595959;--neu:#AEAFB2;--off:#F4F2ED;--gold:#C9A24B}
+:root{--aqua:#4BA7B3;--navy:#1B2B4B;--res:#374D62;--gra:#595959;--neu:#AEAFB2;--off:#F4F2ED}
 *{box-sizing:border-box}
 html{scroll-behavior:auto}
 body{margin:0;background:#fff;font-family:Montserrat,sans-serif;color:var(--navy);-webkit-font-smoothing:antialiased}
@@ -139,7 +139,7 @@ h1,h2,h3,p{margin:0}
 /* tese */
 .tese{background:radial-gradient(ellipse 50% 60% at 50% 30%,rgba(75,167,179,.45),transparent 70%),linear-gradient(180deg,#1B2B4B 0%,#374D62 100%);color:#fff}
 .glass{border:1px solid rgba(255,255,255,.28);border-radius:16px;padding:26px;background:rgba(255,255,255,.06);backdrop-filter:blur(6px);min-height:300px;display:flex;flex-direction:column;text-align:left}
-.glass .g{font-size:14px;font-weight:600;color:var(--gold)}
+.glass .g{font-size:14px;font-weight:600;color:var(--aqua)}
 .glass h3{margin-top:14px;font-size:24px;font-weight:600;line-height:1.2}
 .glass p{margin-top:10px;font-size:14px;line-height:1.55;color:rgba(255,255,255,.85)}
 .glass .chart-box{margin-top:auto;height:92px}.glass p+.chart-box{margin-top:auto}.glass>.chart-box{margin-top:auto}
@@ -199,7 +199,7 @@ table.tbl{width:100%;border-collapse:collapse;font-size:12px}
 .dcard{border:1px solid rgba(255,255,255,.2);border-radius:16px;padding:28px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,0));display:flex;flex-direction:column;text-align:left}
 .dcard--hi{border-color:var(--aqua);background:linear-gradient(180deg,rgba(75,167,179,.18),rgba(75,167,179,.02))}
 .dcard .top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
-.badge{background:var(--gold);color:var(--navy);border-radius:999px;padding:5px 10px;font-size:10px;font-weight:700;letter-spacing:.1em}
+.badge{background:var(--aqua);color:var(--navy);border-radius:999px;padding:5px 10px;font-size:10px;font-weight:700;letter-spacing:.1em}
 .dcard .big{margin-top:22px;font-size:clamp(32px,3.2vw,44px);font-weight:700;letter-spacing:-.03em;line-height:1}
 .dcard .sm{margin-top:8px;font-size:14px;color:rgba(255,255,255,.75)}
 .dcard .ft{margin-top:28px;border-top:1px solid rgba(255,255,255,.15);padding-top:18px;font-size:15px;line-height:1.5}
@@ -562,7 +562,7 @@ a[href="#ficha"].btn:hover i{transform:translateX(3px)}
 body{overflow-x:clip}
 #cronograma,#dados{overflow-x:clip}
 </style>
-<link rel="stylesheet" href="assets/revision.css?v=3cd9a2dbe7">
+<link rel="stylesheet" href="assets/revision.css?v=9c7b4f78fb">
 <script src="assets/lead-form.js?v=b1f1caa66b" defer></script>
 </head>
 <body>
@@ -623,7 +623,7 @@ body{overflow-x:clip}
 <section class="logos">
   <div class="logos__grid">
     <div class="logo"><div class="kicker">Gestor</div><div class="box"><img src="assets/logo-exes-white.png" alt="Éxes Gestora de Recursos"></div></div>
-    <div class="logo"><div class="kicker">Coordenador Líder</div><div class="box"><img src="assets/logo-exes-white.png" alt="Éxes" style="max-height:60%"><small>Serviços Financeiros</small></div></div>
+    <div class="logo"><div class="kicker">Coordenador Líder</div><div class="box box--coordinator"><img src="assets/logo-exes-coordenadora.jpeg" alt="Éxes Coordenadora" width="1600" height="509"></div></div>
     <div class="logo"><div class="kicker">Administrador</div><div class="box"><img src="assets/logo-btg-white.png" alt="BTG Pactual"></div></div>
     <div class="logo"><div class="kicker">Assessor Legal</div><div class="box"><img src="assets/logo-cepeda-white.png" alt="CEPEDA Advogados"></div></div>
     <div class="logo"><div class="kicker">Selos ANBIMA</div><div class="box seals"><img src="assets/selo-anbima-gestao.png" alt="ANBIMA Gestão de Recursos"><img src="assets/selo-anbima-admin.jpg" alt="ANBIMA Administração Fiduciária"></div></div>
@@ -1145,7 +1145,7 @@ document.querySelectorAll('.hl>div,.float').forEach(function(el){
 
 /* ---------- Gráficos (Chart.js) ---------- */
 (function(){
-  var AQUA='#4BA7B3',NAVY='#1B2B4B',RES='#374D62',NEU='#AEAFB2',GOLD='#C9A24B',GRA='#595959';
+  var AQUA='#4BA7B3',NAVY='#1B2B4B',RES='#374D62',NEU='#AEAFB2',GRA='#595959';
   Chart.defaults.font.family='Montserrat, sans-serif'; Chart.defaults.font.size=11; Chart.defaults.color=GRA;
   Chart.defaults.plugins.legend.labels.boxWidth=10; Chart.defaults.plugins.legend.labels.usePointStyle=true;
   Chart.defaults.plugins.tooltip.backgroundColor=NAVY; Chart.defaults.plugins.tooltip.titleFont={weight:'600'};
@@ -1155,12 +1155,12 @@ document.querySelectorAll('.hl>div,.float').forEach(function(el){
   var light={legend:{labels:{color:'rgba(255,255,255,.85)'}}};
 
   /* Pilares */
-  new Chart('chPilar2',{type:'bar',data:{labels:['EXES11','CDI'],datasets:[{data:[17.13,14.63],backgroundColor:[GOLD,'rgba(255,255,255,.35)'],borderRadius:4}]},
+  new Chart('chPilar2',{type:'bar',data:{labels:['EXES11','CDI'],datasets:[{data:[17.13,14.63],backgroundColor:[AQUA,'rgba(255,255,255,.35)'],borderRadius:4}]},
     options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return c.parsed.x.toFixed(2).replace('.',',')+'% em 12 meses'}}}},scales:{x:{display:false,min:0,max:20},y:{ticks:{color:'rgba(255,255,255,.85)',font:{weight:'600'}},grid:{display:false}}}}});
-  new Chart('chPilar3',{type:'doughnut',data:{labels:['LTV médio','Folga até 100%'],datasets:[{data:[52.18,47.82],backgroundColor:[GOLD,'rgba(255,255,255,.15)'],borderWidth:0}]},
+  new Chart('chPilar3',{type:'doughnut',data:{labels:['LTV médio','Folga até 100%'],datasets:[{data:[52.18,47.82],backgroundColor:[AQUA,'rgba(255,255,255,.15)'],borderWidth:0}]},
     options:{responsive:true,maintainAspectRatio:false,cutout:'72%',rotation:-90,circumference:180,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return c.label+': '+c.parsed.toFixed(2).replace('.',',')+'%'}}}}},
     plugins:[{id:'txt',afterDraw:function(ch){var x=ch.chartArea.left+ch.chartArea.width/2,y=ch.chartArea.bottom-6;var g=ch.ctx;g.save();g.textAlign='center';g.fillStyle='#fff';g.font='600 18px Montserrat';g.fillText('52,18%',x,y);g.fillStyle='rgba(255,255,255,.7)';g.font='10px Montserrat';g.fillText('teto 70%',x,y+14);g.restore()}}]});
-  new Chart('chPilar4',{type:'doughnut',data:{labels:['Originação própria','Terceiros'],datasets:[{data:[72,28],backgroundColor:[GOLD,'rgba(255,255,255,.15)'],borderWidth:0}]},
+  new Chart('chPilar4',{type:'doughnut',data:{labels:['Originação própria','Terceiros'],datasets:[{data:[72,28],backgroundColor:[AQUA,'rgba(255,255,255,.15)'],borderWidth:0}]},
     options:{responsive:true,maintainAspectRatio:false,cutout:'72%',plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return c.label+': '+c.parsed+'%'}}}}},
     plugins:[{id:'txt2',afterDraw:function(ch){var x=ch.chartArea.left+ch.chartArea.width/2,y=ch.chartArea.top+ch.chartArea.height/2;var g=ch.ctx;g.save();g.textAlign='center';g.fillStyle='#fff';g.font='600 18px Montserrat';g.fillText('72%',x,y+6);g.restore()}}]});
 
@@ -1202,11 +1202,11 @@ document.querySelectorAll('.hl>div,.float').forEach(function(el){
     options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return c.parsed.x.toFixed(1).replace('.',',')+'% do PL'}}}},scales:{x:{grid:grid,ticks:{callback:function(v){return v+'%'}}},y:{grid:{display:false},ticks:{autoSkip:false,font:{size:10},lineHeight:1.1}}}}});
   var ops=['Acoi','Duarte e Lima','Mont Blanc','Persa Spot','NMC','Maxi','São Carlos','São Vicente','FGR','Celeste','Persa Piatra','EBM (Cyrela)','Raposo (Volpe)','CRI NP38','IC Construtora','Ávida','Totus','Congesa'];
   var conc=[6.29,5.76,5.71,5.7,5.63,5.41,5.31,5.25,5.23,4.84,4.7,4.68,4.45,4.06,2.11,0.95,0.82,0.05];
-  new Chart('chConc',{type:'bar',data:{labels:ops,datasets:[{label:'% do PL',data:conc,backgroundColor:AQUA,borderRadius:3},{label:'Limite 10%',data:ops.map(function(){return 10}),type:'line',borderColor:GOLD,borderDash:[5,4],borderWidth:1.5,pointRadius:0}]},
+  new Chart('chConc',{type:'bar',data:{labels:ops,datasets:[{label:'% do PL',data:conc,backgroundColor:AQUA,borderRadius:3},{label:'Limite 10%',data:ops.map(function(){return 10}),type:'line',borderColor:GRA,borderDash:[5,4],borderWidth:1.5,pointRadius:0}]},
     options:{responsive:true,maintainAspectRatio:false,plugins:{tooltip:{callbacks:{label:pct(2)}}},scales:{x:{grid:{display:false},ticks:{autoSkip:false,maxRotation:60,minRotation:45,font:{size:9}}},y:{min:0,max:11,grid:grid,ticks:{callback:function(v){return v+'%'}}}}}});
   var lops=['Persa Piatra','Acoi','Persa Spot','CRI NP38','Maxi','Totus','Raposo (Volpe)','Mont Blanc','IC Construtora','São Vicente','Celeste','NMC','Duarte e Lima','FGR','Congesa','Ávida'];
   var ltv=[64.8,61.77,61.2,60.98,60.78,58.66,57.84,56.67,55.06,52.47,43.4,40.52,37.34,37.32,7.87,6.33];
-  new Chart('chLTV',{type:'bar',data:{labels:lops,datasets:[{label:'LTV',data:ltv,backgroundColor:RES,borderRadius:3},{label:'Teto 70%',data:lops.map(function(){return 70}),type:'line',borderColor:GOLD,borderDash:[5,4],borderWidth:1.5,pointRadius:0},{label:'Média 52,18%',data:lops.map(function(){return 52.18}),type:'line',borderColor:AQUA,borderWidth:1.5,pointRadius:0}]},
+  new Chart('chLTV',{type:'bar',data:{labels:lops,datasets:[{label:'LTV',data:ltv,backgroundColor:RES,borderRadius:3},{label:'Teto 70%',data:lops.map(function(){return 70}),type:'line',borderColor:GRA,borderDash:[5,4],borderWidth:1.5,pointRadius:0},{label:'Média 52,18%',data:lops.map(function(){return 52.18}),type:'line',borderColor:AQUA,borderWidth:1.5,pointRadius:0}]},
     options:{responsive:true,maintainAspectRatio:false,plugins:{tooltip:{callbacks:{label:pct(2)}}},scales:{x:{grid:{display:false},ticks:{autoSkip:false,maxRotation:60,minRotation:45,font:{size:9}}},y:{min:0,max:80,grid:grid,ticks:{callback:function(v){return v+'%'}}}}}});
 
   /* Destino */
@@ -1216,7 +1216,7 @@ document.querySelectorAll('.hl>div,.float').forEach(function(el){
     options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return 'R$ '+c.parsed.x.toFixed(1).replace('.',',')+' mi'}}}},scales:{x:{grid:gridDark,ticks:{color:'rgba(255,255,255,.7)'}},y:{grid:{display:false},ticks:{color:'rgba(255,255,255,.85)',font:{size:10}}}}}});
   new Chart('chProj',{type:'bar',data:{labels:['1º ano','2º ano','3º ano','4º ano','5º ano'],datasets:[
       {label:'DY sobre o preço de emissão',data:[14.91,14.6,13.94,13.76,13.78],backgroundColor:AQUA,borderRadius:5},
-      {label:'CDI estimado',data:[13.14,11.46,10.25,9.9,9.9],type:'line',borderColor:GOLD,backgroundColor:GOLD,borderWidth:2,pointRadius:3,tension:.3}]},
+      {label:'CDI estimado',data:[13.14,11.46,10.25,9.9,9.9],type:'line',borderColor:NEU,backgroundColor:NEU,borderWidth:2,pointRadius:3,tension:.3}]},
     options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{color:'rgba(255,255,255,.85)'}},tooltip:{callbacks:{label:pct(2)}}},scales:{x:{grid:{display:false},ticks:{color:'rgba(255,255,255,.85)'}},y:{min:0,grid:gridDark,ticks:{color:'rgba(255,255,255,.7)',callback:function(v){return v+'%'}}}}}});
 })();
 </script>
